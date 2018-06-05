@@ -9,5 +9,18 @@
 #ifndef GTModuleCore_h
 #define GTModuleCore_h
 
+#pragma mark 公共方法、宏
+#import "GTMacros.h"
+
+#pragma mark UI
+#import "GTCoreUI.h"
+
+#pragma mark 基类
+#import "GTBase.h"
+
+#pragma mark 拓展
+#import "GTCategory.h"
+
+
 
 #endif /* GTModuleCore_h */

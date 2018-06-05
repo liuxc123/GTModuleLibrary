@@ -166,6 +166,20 @@
 		04D8D65120C6697E007D07BF /* NSFileManager+GTKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D8D63B20C6697E007D07BF /* NSFileManager+GTKit.m */; };
 		04D8D65420C66A77007D07BF /* GTCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D8D65320C66A77007D07BF /* GTCommon.m */; };
 		04D8D65820C6841C007D07BF /* GTBaseFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D8D65720C6841C007D07BF /* GTBaseFormViewController.m */; };
+		04D8D66F20C68649007D07BF /* gt_hud_error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D8D65D20C68649007D07BF /* gt_hud_error@2x.png */; };
+		04D8D67020C68649007D07BF /* error@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D8D65E20C68649007D07BF /* error@3x.png */; };
+		04D8D67120C68649007D07BF /* gt_hud_info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D8D65F20C68649007D07BF /* gt_hud_info@2x.png */; };
+		04D8D67220C68649007D07BF /* angle-mask@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D8D66020C68649007D07BF /* angle-mask@3x.png */; };
+		04D8D67320C68649007D07BF /* angle-mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D8D66120C68649007D07BF /* angle-mask@2x.png */; };
+		04D8D67420C68649007D07BF /* error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D8D66220C68649007D07BF /* error@2x.png */; };
+		04D8D67520C68649007D07BF /* info@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D8D66320C68649007D07BF /* info@3x.png */; };
+		04D8D67620C68649007D07BF /* success@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D8D66420C68649007D07BF /* success@2x.png */; };
+		04D8D67720C68649007D07BF /* success@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D8D66520C68649007D07BF /* success@3x.png */; };
+		04D8D67820C68649007D07BF /* gt_hud_warning@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D8D66620C68649007D07BF /* gt_hud_warning@2x.png */; };
+		04D8D67920C68649007D07BF /* gt_hud_success@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D8D66720C68649007D07BF /* gt_hud_success@2x.png */; };
+		04D8D67A20C68649007D07BF /* info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D8D66820C68649007D07BF /* info@2x.png */; };
+		04D8D67B20C68649007D07BF /* GTProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D8D66C20C68649007D07BF /* GTProgressHUD.m */; };
+		04D8D67C20C68649007D07BF /* GTSuccessView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D8D66D20C68649007D07BF /* GTSuccessView.m */; };
 		0F95CCF402B4B71499402EAB /* Pods_GTModuleLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B31CC245455E1E99820B909 /* Pods_GTModuleLibrary.framework */; };
 /* End PBXBuildFile section */
 
@@ -503,6 +517,24 @@
 		04D8D65320C66A77007D07BF /* GTCommon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTCommon.m; sourceTree = "<group>"; };
 		04D8D65620C6841C007D07BF /* GTBaseFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTBaseFormViewController.h; sourceTree = "<group>"; };
 		04D8D65720C6841C007D07BF /* GTBaseFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTBaseFormViewController.m; sourceTree = "<group>"; };
+		04D8D65B20C68649007D07BF /* GTProgressHUDDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTProgressHUDDefine.h; sourceTree = "<group>"; };
+		04D8D65D20C68649007D07BF /* gt_hud_error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gt_hud_error@2x.png"; sourceTree = "<group>"; };
+		04D8D65E20C68649007D07BF /* error@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "error@3x.png"; sourceTree = "<group>"; };
+		04D8D65F20C68649007D07BF /* gt_hud_info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gt_hud_info@2x.png"; sourceTree = "<group>"; };
+		04D8D66020C68649007D07BF /* angle-mask@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "angle-mask@3x.png"; sourceTree = "<group>"; };
+		04D8D66120C68649007D07BF /* angle-mask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "angle-mask@2x.png"; sourceTree = "<group>"; };
+		04D8D66220C68649007D07BF /* error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "error@2x.png"; sourceTree = "<group>"; };
+		04D8D66320C68649007D07BF /* info@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info@3x.png"; sourceTree = "<group>"; };
+		04D8D66420C68649007D07BF /* success@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "success@2x.png"; sourceTree = "<group>"; };
+		04D8D66520C68649007D07BF /* success@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "success@3x.png"; sourceTree = "<group>"; };
+		04D8D66620C68649007D07BF /* gt_hud_warning@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gt_hud_warning@2x.png"; sourceTree = "<group>"; };
+		04D8D66720C68649007D07BF /* gt_hud_success@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gt_hud_success@2x.png"; sourceTree = "<group>"; };
+		04D8D66820C68649007D07BF /* info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info@2x.png"; sourceTree = "<group>"; };
+		04D8D66920C68649007D07BF /* GTSuccessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTSuccessView.h; sourceTree = "<group>"; };
+		04D8D66A20C68649007D07BF /* GTProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTProgressHUD.h; sourceTree = "<group>"; };
+		04D8D66C20C68649007D07BF /* GTProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTProgressHUD.m; sourceTree = "<group>"; };
+		04D8D66D20C68649007D07BF /* GTSuccessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTSuccessView.m; sourceTree = "<group>"; };
+		04D8D67D20C686C6007D07BF /* GTRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTRouter.h; sourceTree = "<group>"; };
 		35BE533D4B2E0DF0D26FDCCC /* Pods-GTModuleLibrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GTModuleLibrary.release.xcconfig"; path = "Pods/Target Support Files/Pods-GTModuleLibrary/Pods-GTModuleLibrary.release.xcconfig"; sourceTree = "<group>"; };
 		6B31CC245455E1E99820B909 /* Pods_GTModuleLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GTModuleLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F513D1D26F8E50309593589A /* Pods-GTModuleLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GTModuleLibrary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GTModuleLibrary/Pods-GTModuleLibrary.debug.xcconfig"; sourceTree = "<group>"; };
@@ -602,6 +634,7 @@
 		04D8D43920C63B06007D07BF /* GTCoreUI */ = {
 			isa = PBXGroup;
 			children = (
+				04D8D65920C68649007D07BF /* GTProgressHUD */,
 				04D8D4B620C6675C007D07BF /* GTForm */,
 				04D8D4B220C6671D007D07BF /* GTPopupController */,
 				04D8D47820C658A0007D07BF /* GTAlert */,
@@ -625,6 +658,7 @@
 		04D8D43B20C63B1E007D07BF /* GTRouter */ = {
 			isa = PBXGroup;
 			children = (
+				04D8D67D20C686C6007D07BF /* GTRouter.h */,
 			);
 			path = GTRouter;
 			sourceTree = "<group>";
@@ -1357,6 +1391,38 @@
 			path = GTBaseFormController;
 			sourceTree = "<group>";
 		};
+		04D8D65920C68649007D07BF /* GTProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				04D8D66A20C68649007D07BF /* GTProgressHUD.h */,
+				04D8D66C20C68649007D07BF /* GTProgressHUD.m */,
+				04D8D65B20C68649007D07BF /* GTProgressHUDDefine.h */,
+				04D8D66920C68649007D07BF /* GTSuccessView.h */,
+				04D8D66D20C68649007D07BF /* GTSuccessView.m */,
+				04D8D65C20C68649007D07BF /* Resources */,
+			);
+			path = GTProgressHUD;
+			sourceTree = "<group>";
+		};
+		04D8D65C20C68649007D07BF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				04D8D66120C68649007D07BF /* angle-mask@2x.png */,
+				04D8D66020C68649007D07BF /* angle-mask@3x.png */,
+				04D8D66220C68649007D07BF /* error@2x.png */,
+				04D8D65E20C68649007D07BF /* error@3x.png */,
+				04D8D65D20C68649007D07BF /* gt_hud_error@2x.png */,
+				04D8D65F20C68649007D07BF /* gt_hud_info@2x.png */,
+				04D8D66720C68649007D07BF /* gt_hud_success@2x.png */,
+				04D8D66620C68649007D07BF /* gt_hud_warning@2x.png */,
+				04D8D66820C68649007D07BF /* info@2x.png */,
+				04D8D66320C68649007D07BF /* info@3x.png */,
+				04D8D66420C68649007D07BF /* success@2x.png */,
+				04D8D66520C68649007D07BF /* success@3x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		3B054A092092E5AF27301913 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1435,11 +1501,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04D8D67320C68649007D07BF /* angle-mask@2x.png in Resources */,
+				04D8D67720C68649007D07BF /* success@3x.png in Resources */,
+				04D8D67020C68649007D07BF /* error@3x.png in Resources */,
 				04D8D47020C65780007D07BF /* GTWKWebView.bundle in Resources */,
 				04B5406E20C631290001BBE6 /* LaunchScreen.storyboard in Resources */,
+				04D8D67A20C68649007D07BF /* info@2x.png in Resources */,
+				04D8D67920C68649007D07BF /* gt_hud_success@2x.png in Resources */,
+				04D8D67620C68649007D07BF /* success@2x.png in Resources */,
+				04D8D66F20C68649007D07BF /* gt_hud_error@2x.png in Resources */,
 				04B5406B20C631290001BBE6 /* Assets.xcassets in Resources */,
+				04D8D67120C68649007D07BF /* gt_hud_info@2x.png in Resources */,
 				04B5406920C631290001BBE6 /* Main.storyboard in Resources */,
 				04D8D51420C6675D007D07BF /* XLForm.bundle in Resources */,
+				04D8D67520C68649007D07BF /* info@3x.png in Resources */,
+				04D8D67420C68649007D07BF /* error@2x.png in Resources */,
+				04D8D67820C68649007D07BF /* gt_hud_warning@2x.png in Resources */,
+				04D8D67220C68649007D07BF /* angle-mask@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1474,6 +1552,7 @@
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/BeeHive/BeeHive.framework",
 				"${BUILT_PRODUCTS_DIR}/JLRoutes/JLRoutes.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/RealReachability/RealReachability.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
@@ -1484,6 +1563,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BeeHive.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JLRoutes.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealReachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
@@ -1551,6 +1631,7 @@
 				04D8D5DD20C66941007D07BF /* UIImage+GTKit.m in Sources */,
 				04D8D64F20C6697E007D07BF /* NSUserDefaults+GTKit.m in Sources */,
 				04D8D47320C65780007D07BF /* UIViewController+GTNavigationBar.m in Sources */,
+				04D8D67B20C68649007D07BF /* GTProgressHUD.m in Sources */,
 				04D8D53520C6675D007D07BF /* UIView+GTFrame.m in Sources */,
 				04D8D60C20C66941007D07BF /* UITextField+GTHistory.m in Sources */,
 				04D8D47220C65780007D07BF /* GTNavigationController.m in Sources */,
@@ -1567,6 +1648,7 @@
 				04D8D4AB20C66225007D07BF /* CALayer+GTAnimation.m in Sources */,
 				04D8D5FA20C66941007D07BF /* UIButton+GTBadge.m in Sources */,
 				04D8D51620C6675D007D07BF /* GTFormPickerCell.m in Sources */,
+				04D8D67C20C68649007D07BF /* GTSuccessView.m in Sources */,
 				04D8D60120C66941007D07BF /* UISplitViewController+GTKit.m in Sources */,
 				04D8D5F620C66941007D07BF /* UIControl+GTBlock.m in Sources */,
 				04D8D5D720C66941007D07BF /* UITabBarItem+GTKit.m in Sources */,
@@ -1797,6 +1879,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E4RZEW9957;
 				INFOPLIST_FILE = GTModuleLibrary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.liuxc.GTModuleLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1816,6 +1899,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E4RZEW9957;
 				INFOPLIST_FILE = GTModuleLibrary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.liuxc.GTModuleLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME)";

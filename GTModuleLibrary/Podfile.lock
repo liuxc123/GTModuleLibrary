@@ -17,6 +17,7 @@ PODS:
   - BeeHive (1.5.1)
   - JLRoutes (2.1)
   - Masonry (1.1.0)
+  - MBProgressHUD (1.1.0)
   - RealReachability (1.1.9):
     - RealReachability/Connection (= 1.1.9)
     - RealReachability/Ping (= 1.1.9)
@@ -32,6 +33,7 @@ DEPENDENCIES:
   - BeeHive
   - JLRoutes
   - Masonry
+  - MBProgressHUD
   - RealReachability
   - SDWebImage
   - YTKNetwork
@@ -42,6 +44,7 @@ SPEC REPOS:
     - BeeHive
     - JLRoutes
     - Masonry
+    - MBProgressHUD
     - RealReachability
     - SDWebImage
     - YTKNetwork
@@ -51,10 +54,11 @@ SPEC CHECKSUMS:
   BeeHive: b135a33b3519814ec5d117318d205e10c997450f
   JLRoutes: d755245322b94227662ea3e43492fdca94e05c5b
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   RealReachability: a8c483900986a0f3305733961effbfbb00637a02
   SDWebImage: 6da6c8bca115addc4de8613362e1b15f66333825
   YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
 
-PODFILE CHECKSUM: 50aff56b22d6dff82b2b8c5a99e0c5ea3d7dd220
+PODFILE CHECKSUM: 95f911f93d15169ed3ea8ce397838861d1a5fdc3
 
 COCOAPODS: 1.5.0

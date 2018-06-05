@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <RealReachability/RealReachability.h>
 #import "UIViewController+GTNavigationBar.h"
-//#import "UIView+GTTransition.h"
+#import "UIView+GTTransition.h"
+#import "GTProgressHUD.h"
 //#import "GTLoadingView.h"
 
 @interface GTBaseViewController : UIViewController
@@ -34,8 +36,8 @@
  @param type 动画样式
  @param animationView 需要动画的 View
  */
-//- (void)gt_animationWithGTTransitionType:(GTViewTransitionType)type
-//                           animationView:(UIView *)animationView;
+- (void)gt_animationWithGTTransitionType:(GTViewTransitionType)type
+                           animationView:(UIView *)animationView;
 
 #pragma mark - 清理缓存
 

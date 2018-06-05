@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GTBaseViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : GTBaseViewController
 
 
 @end

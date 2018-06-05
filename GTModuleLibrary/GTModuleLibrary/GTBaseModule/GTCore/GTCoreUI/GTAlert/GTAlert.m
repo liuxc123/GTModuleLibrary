@@ -1482,8 +1482,7 @@ typedef NS_ENUM(NSInteger, GTBackgroundStyle) {
     
     self.extendedLayoutIncludesOpaqueBars = NO;
     
-    self.automaticallyAdjustsScrollViewInsets = NO;
-    
+
     if (self.config.modelBackgroundStyle == GTBackgroundStyleBlur) {
         
         self.backgroundVisualEffectView = [[UIVisualEffectView alloc] initWithEffect:nil];

@@ -15,6 +15,7 @@
 #import <mach/mach.h>
 #import <objc/runtime.h>
 #import <libkern/OSAtomic.h>
+#import <stdatomic.h>
 
 
 #define kNetworkIndicatorDelay (1/30.0)
@@ -264,6 +265,7 @@ static volatile int32_t numberOfActiveNetworkConnectionsxxx;
 - (void)gt_beganNetworkActivity
 {
     self.networkActivityIndicatorVisible = OSAtomicAdd32(1, &numberOfActiveNetworkConnectionsxxx) > 0;
+
 }
 
 - (void)gt_endedNetworkActivity

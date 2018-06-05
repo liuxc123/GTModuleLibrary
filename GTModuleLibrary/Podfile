@@ -21,5 +21,8 @@ target 'GTModuleLibrary' do
   #网络监控工具
   pod 'RealReachability'
 
+  #提示工具
+  pod 'MBProgressHUD'
+
 
 end

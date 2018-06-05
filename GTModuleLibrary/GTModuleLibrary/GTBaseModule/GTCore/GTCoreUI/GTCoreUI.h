@@ -18,6 +18,8 @@
 #pragma mark 表单工具
 #import "GTForm.h"
 
+#pragma mark 提示工具
+#import "GTProgressHUD.h"
 
 
 

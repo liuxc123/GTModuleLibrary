@@ -75,6 +75,9 @@
 
     //配置主题
     [self configTheme];
+
+    //配置默认通知
+    [self configDefaultNoti];
 }
 
 - (void)viewDidLayoutSubviews {
@@ -107,9 +110,30 @@
     //配置当前页面设备旋转
     self.supportedOrientationMask = UIInterfaceOrientationMaskAll;
     
+
+}
+
+
+- (void)configDefaultNoti {
     // 动态字体notification
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(contentSizeCategoryDidChanged:) name:UIContentSizeCategoryDidChangeNotification object:nil];
+
+    //添加一个通知监听网络状态切换
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(networkChanged:)
+                                                 name:kRealReachabilityChangedNotification
+                                               object:nil];
+    [GLobalRealReachability startNotifier];
+
+    ReachabilityStatus status = [GLobalRealReachability currentReachabilityStatus];
+    //当无网络时 每进一个页面都进行提示
+    if (status == RealStatusNotReachable)
+    {
+        [GTProgressHUD showMessage:@"当前网络连接失败，请查看设置"];
+    }
 }
+
+
 
 #pragma mark - 配置默认样式
 - (void)configDefaultStyle {
@@ -133,6 +157,60 @@
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
+}
+
+#pragma mark - 私有方法
+#pragma mark 监听网络变化
+/**
+ *  @author wujunyang, 16-09-19 16:09:24
+ *
+ *  @brief 监听网络变化
+ *
+ *  @param notification 通知
+ */
+- (void)networkChanged:(NSNotification *)notification
+{
+    RealReachability *reachability = (RealReachability *)notification.object;
+    ReachabilityStatus status = [reachability currentReachabilityStatus];
+
+
+    if (status == RealStatusNotReachable)
+    {
+        [GTProgressHUD showMessage:@"当前网络连接失败，请查看设置" view:self.view];
+    }
+
+    if (status == RealStatusViaWiFi)
+    {
+        [GTProgressHUD showMessage:@"当前网络为WIFI" view:self.view];
+    }
+
+    if (status == RealStatusViaWWAN)
+    {
+
+    }
+
+    WWANAccessType accessType = [GLobalRealReachability currentWWANtype];
+
+    if (status == RealStatusViaWWAN)
+    {
+        if (accessType == WWANType2G)
+        {
+            [GTProgressHUD showMessage:@"当前为2G网络" view:self.view];
+
+        }
+        else if (accessType == WWANType3G)
+        {
+            [GTProgressHUD showMessage:@"当前为3G网络" view:self.view];
+        }
+        else if (accessType == WWANType4G)
+        {
+            [GTProgressHUD showMessage:@"当前为4G网络" view:self.view];
+        }
+        else
+        {
+
+        }
+    }
 }
 
 
