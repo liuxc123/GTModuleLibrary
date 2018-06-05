@@ -118,6 +118,7 @@
 		04D8D43820C63620007D07BF /* GTCoreTool */ = {
 			isa = PBXGroup;
 			children = (
+				04D8D43E20C63B7D007D07BF /* GTNetWork */,
 			);
 			path = GTCoreTool;
 			sourceTree = "<group>";
@@ -125,7 +126,6 @@
 		04D8D43920C63B06007D07BF /* GTCoreUI */ = {
 			isa = PBXGroup;
 			children = (
-				04D8D43E20C63B7D007D07BF /* GTNetWork */,
 				04D8D43C20C63B3B007D07BF /* GTCoreUI.h */,
 			);
 			path = GTCoreUI;
