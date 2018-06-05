@@ -9,5 +9,7 @@
 #ifndef GTMacros_h
 #define GTMacros_h
 
+#import "GTCommon.h"
+#import "GTCGCommon.h"
 
 #endif /* GTMacros_h */
