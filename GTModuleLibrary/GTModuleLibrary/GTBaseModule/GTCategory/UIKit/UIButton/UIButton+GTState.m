@@ -7,7 +7,7 @@
 //
 
 #define GTBackgroundColorKEY(state) [NSString stringWithFormat:@"backgroundColor%zd",(long)state]
-#define GTBorderColorKEY(state) [NSString stringWithFormat:@"borderColor%zd",state]
+#define GTBorderColorKEY(state) [NSString stringWithFormat:@"borderColor%zd",(long)state]
 
 #import "UIButton+GTState.h"
 #import <objc/runtime.h>

@@ -366,7 +366,7 @@
             [GTAlert alert].config.gt_Content(@"无法获取到当前 URL！").gt_Action(@"确定", nil).gt_Show();
             return;
         }
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url_Str] options:@{} completionHandler:nil];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url_Str]];
 
     })
     .gt_Action(@"复制链接", ^{

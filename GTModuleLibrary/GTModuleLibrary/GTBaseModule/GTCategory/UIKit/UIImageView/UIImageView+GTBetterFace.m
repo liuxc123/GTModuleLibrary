@@ -28,7 +28,7 @@ void gt_hack_uiimageview_bf(){
 }
 
 - (void)gt_setBetterFaceImage:(UIImage *)image{
-    [self setGt_needsBetterFace:image];
+    [self setGt_needsBetterFace:(image == nil)];
     if (![self gt_needsBetterFace]) {
         return;
     }

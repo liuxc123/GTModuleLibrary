@@ -235,7 +235,7 @@
     // APPStore
     if ([url.absoluteString containsString:@"itunes.apple.com"])
     {
-        [[UIApplication sharedApplication] openURL:navigationAction.request.URL options:@{} completionHandler:nil];
+        [[UIApplication sharedApplication] openURL:navigationAction.request.URL];
         decisionHandler(WKNavigationActionPolicyCancel);
         return;
     }
@@ -244,7 +244,7 @@
     {
         if ([[UIApplication sharedApplication] canOpenURL:url])
         {
-            [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
+            [[UIApplication sharedApplication] openURL:url];
             decisionHandler(WKNavigationActionPolicyCancel);
             return;
         }
