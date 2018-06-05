@@ -13,6 +13,7 @@
 		04B5406B20C631290001BBE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B5406A20C631290001BBE6 /* Assets.xcassets */; };
 		04B5406E20C631290001BBE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B5406C20C631290001BBE6 /* LaunchScreen.storyboard */; };
 		04B5407120C631290001BBE6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B5407020C631290001BBE6 /* main.m */; };
+		04D8D44420C63BEA007D07BF /* GTBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D8D44320C63BEA007D07BF /* GTBaseRequest.m */; };
 		0F95CCF402B4B71499402EAB /* Pods_GTModuleLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B31CC245455E1E99820B909 /* Pods_GTModuleLibrary.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +28,12 @@
 		04B5406D20C631290001BBE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04B5406F20C631290001BBE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04B5407020C631290001BBE6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		04D8D43520C632F2007D07BF /* GTModuleCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTModuleCore.h; sourceTree = "<group>"; };
+		04D8D43520C632F2007D07BF /* GTCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTCore.h; sourceTree = "<group>"; };
+		04D8D43C20C63B3B007D07BF /* GTCoreUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTCoreUI.h; sourceTree = "<group>"; };
+		04D8D43D20C63B4D007D07BF /* GTMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTMacros.h; sourceTree = "<group>"; };
+		04D8D43F20C63BB5007D07BF /* GTModuleLibrary-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GTModuleLibrary-Bridging-Header.h"; sourceTree = "<group>"; };
+		04D8D44220C63BEA007D07BF /* GTBaseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTBaseRequest.h; sourceTree = "<group>"; };
+		04D8D44320C63BEA007D07BF /* GTBaseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTBaseRequest.m; sourceTree = "<group>"; };
 		35BE533D4B2E0DF0D26FDCCC /* Pods-GTModuleLibrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GTModuleLibrary.release.xcconfig"; path = "Pods/Target Support Files/Pods-GTModuleLibrary/Pods-GTModuleLibrary.release.xcconfig"; sourceTree = "<group>"; };
 		6B31CC245455E1E99820B909 /* Pods_GTModuleLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GTModuleLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F513D1D26F8E50309593589A /* Pods-GTModuleLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GTModuleLibrary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GTModuleLibrary/Pods-GTModuleLibrary.debug.xcconfig"; sourceTree = "<group>"; };
@@ -66,7 +72,7 @@
 		04B5406020C631290001BBE6 /* GTModuleLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				04D8D43420C632C5007D07BF /* GTModuleCore */,
+				04D8D43420C632C5007D07BF /* GTBaseModule */,
 				04B5406120C631290001BBE6 /* AppDelegate.h */,
 				04B5406220C631290001BBE6 /* AppDelegate.m */,
 				04B5406420C631290001BBE6 /* ViewController.h */,
@@ -76,16 +82,77 @@
 				04B5406C20C631290001BBE6 /* LaunchScreen.storyboard */,
 				04B5406F20C631290001BBE6 /* Info.plist */,
 				04B5407020C631290001BBE6 /* main.m */,
+				04D8D43F20C63BB5007D07BF /* GTModuleLibrary-Bridging-Header.h */,
 			);
 			path = GTModuleLibrary;
 			sourceTree = "<group>";
 		};
-		04D8D43420C632C5007D07BF /* GTModuleCore */ = {
+		04D8D43420C632C5007D07BF /* GTBaseModule */ = {
 			isa = PBXGroup;
 			children = (
-				04D8D43520C632F2007D07BF /* GTModuleCore.h */,
+				04D8D43720C635CC007D07BF /* GTCategory */,
+				04D8D43620C635B5007D07BF /* GTCore */,
 			);
-			path = GTModuleCore;
+			path = GTBaseModule;
+			sourceTree = "<group>";
+		};
+		04D8D43620C635B5007D07BF /* GTCore */ = {
+			isa = PBXGroup;
+			children = (
+				04D8D43B20C63B1E007D07BF /* GTRouter */,
+				04D8D43A20C63B0F007D07BF /* GTMacros */,
+				04D8D43920C63B06007D07BF /* GTCoreUI */,
+				04D8D43820C63620007D07BF /* GTCoreTool */,
+				04D8D43520C632F2007D07BF /* GTCore.h */,
+			);
+			path = GTCore;
+			sourceTree = "<group>";
+		};
+		04D8D43720C635CC007D07BF /* GTCategory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GTCategory;
+			sourceTree = "<group>";
+		};
+		04D8D43820C63620007D07BF /* GTCoreTool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GTCoreTool;
+			sourceTree = "<group>";
+		};
+		04D8D43920C63B06007D07BF /* GTCoreUI */ = {
+			isa = PBXGroup;
+			children = (
+				04D8D43E20C63B7D007D07BF /* GTNetWork */,
+				04D8D43C20C63B3B007D07BF /* GTCoreUI.h */,
+			);
+			path = GTCoreUI;
+			sourceTree = "<group>";
+		};
+		04D8D43A20C63B0F007D07BF /* GTMacros */ = {
+			isa = PBXGroup;
+			children = (
+				04D8D43D20C63B4D007D07BF /* GTMacros.h */,
+			);
+			path = GTMacros;
+			sourceTree = "<group>";
+		};
+		04D8D43B20C63B1E007D07BF /* GTRouter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GTRouter;
+			sourceTree = "<group>";
+		};
+		04D8D43E20C63B7D007D07BF /* GTNetWork */ = {
+			isa = PBXGroup;
+			children = (
+				04D8D44220C63BEA007D07BF /* GTBaseRequest.h */,
+				04D8D44320C63BEA007D07BF /* GTBaseRequest.m */,
+			);
+			path = GTNetWork;
 			sourceTree = "<group>";
 		};
 		3B054A092092E5AF27301913 /* Pods */ = {
@@ -138,6 +205,7 @@
 				TargetAttributes = {
 					04B5405D20C631290001BBE6 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -200,11 +268,21 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GTModuleLibrary/Pods-GTModuleLibrary-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/BeeHive/BeeHive.framework",
+				"${BUILT_PRODUCTS_DIR}/JLRoutes/JLRoutes.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/RealReachability/RealReachability.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/YTKNetwork/YTKNetwork.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BeeHive.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JLRoutes.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealReachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YTKNetwork.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04B5406620C631290001BBE6 /* ViewController.m in Sources */,
+				04D8D44420C63BEA007D07BF /* GTBaseRequest.m in Sources */,
 				04B5407120C631290001BBE6 /* main.m in Sources */,
 				04B5406320C631290001BBE6 /* AppDelegate.m in Sources */,
 			);
@@ -356,12 +435,16 @@
 			baseConfigurationReference = F513D1D26F8E50309593589A /* Pods-GTModuleLibrary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E4RZEW9957;
 				INFOPLIST_FILE = GTModuleLibrary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.liuxc.GTModuleLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GTModuleLibrary/GTBaseModule/GTCore/GTCoreUI/GTNetWork/GTModuleLibrary-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -371,12 +454,15 @@
 			baseConfigurationReference = 35BE533D4B2E0DF0D26FDCCC /* Pods-GTModuleLibrary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E4RZEW9957;
 				INFOPLIST_FILE = GTModuleLibrary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.liuxc.GTModuleLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GTModuleLibrary/GTBaseModule/GTCore/GTCoreUI/GTNetWork/GTModuleLibrary-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
