@@ -27,6 +27,7 @@
 		04B5406D20C631290001BBE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04B5406F20C631290001BBE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04B5407020C631290001BBE6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		04D8D43520C632F2007D07BF /* GTModuleCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTModuleCore.h; sourceTree = "<group>"; };
 		35BE533D4B2E0DF0D26FDCCC /* Pods-GTModuleLibrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GTModuleLibrary.release.xcconfig"; path = "Pods/Target Support Files/Pods-GTModuleLibrary/Pods-GTModuleLibrary.release.xcconfig"; sourceTree = "<group>"; };
 		6B31CC245455E1E99820B909 /* Pods_GTModuleLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GTModuleLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F513D1D26F8E50309593589A /* Pods-GTModuleLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GTModuleLibrary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GTModuleLibrary/Pods-GTModuleLibrary.debug.xcconfig"; sourceTree = "<group>"; };
@@ -65,6 +66,7 @@
 		04B5406020C631290001BBE6 /* GTModuleLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				04D8D43420C632C5007D07BF /* GTModuleCore */,
 				04B5406120C631290001BBE6 /* AppDelegate.h */,
 				04B5406220C631290001BBE6 /* AppDelegate.m */,
 				04B5406420C631290001BBE6 /* ViewController.h */,
@@ -76,6 +78,14 @@
 				04B5407020C631290001BBE6 /* main.m */,
 			);
 			path = GTModuleLibrary;
+			sourceTree = "<group>";
+		};
+		04D8D43420C632C5007D07BF /* GTModuleCore */ = {
+			isa = PBXGroup;
+			children = (
+				04D8D43520C632F2007D07BF /* GTModuleCore.h */,
+			);
+			path = GTModuleCore;
 			sourceTree = "<group>";
 		};
 		3B054A092092E5AF27301913 /* Pods */ = {
