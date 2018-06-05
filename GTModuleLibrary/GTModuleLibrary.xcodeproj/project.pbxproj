@@ -165,6 +165,7 @@
 		04D8D65020C6697E007D07BF /* NSSet+GTKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D8D63A20C6697D007D07BF /* NSSet+GTKit.m */; };
 		04D8D65120C6697E007D07BF /* NSFileManager+GTKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D8D63B20C6697E007D07BF /* NSFileManager+GTKit.m */; };
 		04D8D65420C66A77007D07BF /* GTCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D8D65320C66A77007D07BF /* GTCommon.m */; };
+		04D8D65820C6841C007D07BF /* GTBaseFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D8D65720C6841C007D07BF /* GTBaseFormViewController.m */; };
 		0F95CCF402B4B71499402EAB /* Pods_GTModuleLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B31CC245455E1E99820B909 /* Pods_GTModuleLibrary.framework */; };
 /* End PBXBuildFile section */
 
@@ -500,6 +501,8 @@
 		04D8D63C20C6697E007D07BF /* NSObject+GTReflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GTReflection.h"; sourceTree = "<group>"; };
 		04D8D65220C66A77007D07BF /* GTCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTCommon.h; sourceTree = "<group>"; };
 		04D8D65320C66A77007D07BF /* GTCommon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTCommon.m; sourceTree = "<group>"; };
+		04D8D65620C6841C007D07BF /* GTBaseFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTBaseFormViewController.h; sourceTree = "<group>"; };
+		04D8D65720C6841C007D07BF /* GTBaseFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTBaseFormViewController.m; sourceTree = "<group>"; };
 		35BE533D4B2E0DF0D26FDCCC /* Pods-GTModuleLibrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GTModuleLibrary.release.xcconfig"; path = "Pods/Target Support Files/Pods-GTModuleLibrary/Pods-GTModuleLibrary.release.xcconfig"; sourceTree = "<group>"; };
 		6B31CC245455E1E99820B909 /* Pods_GTModuleLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GTModuleLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F513D1D26F8E50309593589A /* Pods-GTModuleLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GTModuleLibrary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GTModuleLibrary/Pods-GTModuleLibrary.debug.xcconfig"; sourceTree = "<group>"; };
@@ -638,6 +641,7 @@
 		04D8D44520C65677007D07BF /* GTBase */ = {
 			isa = PBXGroup;
 			children = (
+				04D8D65520C68406007D07BF /* GTBaseFormController */,
 				04D8D44620C6577F007D07BF /* GTBaseViewController */,
 				04D8D45A20C65780007D07BF /* GTNavigationCoontroller */,
 				04D8D44920C65780007D07BF /* GTWebViewController */,
@@ -972,13 +976,13 @@
 		04D8D4E820C6675D007D07BF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				04D8D4E920C6675D007D07BF /* GTFormViewController.m */,
-				04D8D4EA20C6675D007D07BF /* GTFormOptionsViewController.h */,
-				04D8D4EB20C6675D007D07BF /* GTFormOptionsObject.m */,
-				04D8D4EC20C6675D007D07BF /* GTFormViewController.h */,
-				04D8D4ED20C6675D007D07BF /* GTFormRowDescriptorViewController.h */,
 				04D8D4EE20C6675D007D07BF /* GTFormOptionsObject.h */,
+				04D8D4EB20C6675D007D07BF /* GTFormOptionsObject.m */,
+				04D8D4EA20C6675D007D07BF /* GTFormOptionsViewController.h */,
 				04D8D4EF20C6675D007D07BF /* GTFormOptionsViewController.m */,
+				04D8D4ED20C6675D007D07BF /* GTFormRowDescriptorViewController.h */,
+				04D8D4EC20C6675D007D07BF /* GTFormViewController.h */,
+				04D8D4E920C6675D007D07BF /* GTFormViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1344,6 +1348,15 @@
 			path = UIWindow;
 			sourceTree = "<group>";
 		};
+		04D8D65520C68406007D07BF /* GTBaseFormController */ = {
+			isa = PBXGroup;
+			children = (
+				04D8D65620C6841C007D07BF /* GTBaseFormViewController.h */,
+				04D8D65720C6841C007D07BF /* GTBaseFormViewController.m */,
+			);
+			path = GTBaseFormController;
+			sourceTree = "<group>";
+		};
 		3B054A092092E5AF27301913 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1632,6 +1645,7 @@
 				04D8D52E20C6675D007D07BF /* GTFormRightImageButton.m in Sources */,
 				04D8D53220C6675D007D07BF /* NSObject+GTFormAdditions.m in Sources */,
 				04D8D64620C6697E007D07BF /* NSBundle+GTKit.m in Sources */,
+				04D8D65820C6841C007D07BF /* GTBaseFormViewController.m in Sources */,
 				04D8D46B20C65780007D07BF /* WeakScriptMessageDelegate.m in Sources */,
 				04D8D53B20C6675D007D07BF /* GTFormValidator.m in Sources */,
 				04D8D54220C66893007D07BF /* CAAnimation+EasingEquations.m in Sources */,

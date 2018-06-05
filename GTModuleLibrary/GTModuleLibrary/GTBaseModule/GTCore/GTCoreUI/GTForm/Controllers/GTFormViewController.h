@@ -24,6 +24,7 @@
 // THE SOFTWARE.
 
 #import <UIKit/UIKit.h>
+#import "GTBaseViewController.h"
 #import "GTFormOptionsViewController.h"
 #import "GTFormDescriptor.h"
 #import "GTFormSectionDescriptor.h"
@@ -79,7 +80,7 @@ typedef NS_ENUM(NSUInteger, GTFormRowNavigationDirection) {
 
 @end
 
-@interface GTFormViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, GTFormDescriptorDelegate, UITextFieldDelegate, UITextViewDelegate, GTFormViewControllerDelegate>
+@interface GTFormViewController : GTBaseViewController<UITableViewDataSource, UITableViewDelegate, GTFormDescriptorDelegate, UITextFieldDelegate, UITextViewDelegate, GTFormViewControllerDelegate>
 
 @property GTFormDescriptor * form;
 @property IBOutlet UITableView * tableView;
