@@ -18,11 +18,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    YTKNetworkAgent *agent = [YTKNetworkAgent sharedAgent];
+    [agent setValue:[NSSet setWithObjects:@"application/json", @"text/plain", @"text/javascript", @"text/json",@"text/html",@"text/css", nil] forKeyPath:@"_manager.responseSerializer.acceptableContentTypes"];
 
     YTKNetworkConfig *config = [YTKNetworkConfig sharedConfig];
+    config.debugLogEnabled = DEBUG;
     config.baseUrl = @"http://test.debug.webus.vip";
-    NSSet *contentTypeSet = [NSSet setWithObjects:@"application/json", @"text/plain", @"text/javascript", @"text/json",@"text/html",@"text/css", nil];
-    [config setValue:contentTypeSet forKeyPath:@"_manager.responseSerializer.acceptableContentTypes"];
+
+
+
 
     return YES;
 }
