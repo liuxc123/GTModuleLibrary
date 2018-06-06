@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-
+#import <YTKNetwork/YTKNetwork.h>
 
 @interface AppDelegate ()
 
@@ -18,6 +18,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+    YTKNetworkConfig *config = [YTKNetworkConfig sharedConfig];
+    config.baseUrl = @"http://test.debug.webus.vip";
+    NSSet *contentTypeSet = [NSSet setWithObjects:@"application/json", @"text/plain", @"text/javascript", @"text/json",@"text/html",@"text/css", nil];
+    [config setValue:contentTypeSet forKeyPath:@"_manager.responseSerializer.acceptableContentTypes"];
 
     return YES;
 }

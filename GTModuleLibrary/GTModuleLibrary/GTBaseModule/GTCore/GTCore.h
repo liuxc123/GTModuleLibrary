@@ -21,6 +21,7 @@
 #pragma mark 拓展
 #import "GTCategory.h"
 
-
+#pragma mark 工具
+#import "GTCoreTool.h"
 
 #endif /* GTModuleCore_h */

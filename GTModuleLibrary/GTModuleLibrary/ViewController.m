@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "GTFunctionCommon.h"
-
+#import "UserInfoApi.h"
 
 @interface ViewController ()
 
@@ -20,7 +20,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
-    DLog(@"打印");
+    UserInfoApi *api = [[UserInfoApi alloc] init];
+
+    [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+
+    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+
+    }];
+
+    
+
 }
 
 

@@ -29,6 +29,13 @@ FOUNDATION_EXTERN NSString *const GT_BaseRequest_DataKey;
 #pragma mark - Override
 
 /**
+ 自定义request参数
+
+ @return dic
+ */
+- (NSDictionary *)reformParams;
+
+/**
  自定义解析器解析响应参数
 
  @param jsonResponse json响应

@@ -250,6 +250,10 @@
 		04D8D76720C787E6007D07BF /* LLNetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D8D72820C787E5007D07BF /* LLNetworkHelper.m */; };
 		04D8D76D20C7B35A007D07BF /* GTSystemCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D8D76C20C7B35A007D07BF /* GTSystemCommon.m */; };
 		04D8D77020C7D980007D07BF /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D8D76F20C7D980007D07BF /* Test.swift */; };
+		04D8D77520C7DFB1007D07BF /* GTBatchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D8D77120C7DFB1007D07BF /* GTBatchRequest.m */; };
+		04D8D77620C7DFB1007D07BF /* GTChainRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D8D77420C7DFB1007D07BF /* GTChainRequest.m */; };
+		04D8D77820C7E0E9007D07BF /* UserInfoApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D8D77720C7E0E9007D07BF /* UserInfoApi.swift */; };
+		04D8D77B20C7E2CD007D07BF /* UserInfoApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D8D77A20C7E2CD007D07BF /* UserInfoApi.m */; };
 		0F95CCF402B4B71499402EAB /* Pods_GTModuleLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B31CC245455E1E99820B909 /* Pods_GTModuleLibrary.framework */; };
 /* End PBXBuildFile section */
 
@@ -741,6 +745,13 @@
 		04D8D76C20C7B35A007D07BF /* GTSystemCommon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTSystemCommon.m; sourceTree = "<group>"; };
 		04D8D76E20C7B3BF007D07BF /* GTCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTCommon.h; sourceTree = "<group>"; };
 		04D8D76F20C7D980007D07BF /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		04D8D77120C7DFB1007D07BF /* GTBatchRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTBatchRequest.m; sourceTree = "<group>"; };
+		04D8D77220C7DFB1007D07BF /* GTChainRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTChainRequest.h; sourceTree = "<group>"; };
+		04D8D77320C7DFB1007D07BF /* GTBatchRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTBatchRequest.h; sourceTree = "<group>"; };
+		04D8D77420C7DFB1007D07BF /* GTChainRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTChainRequest.m; sourceTree = "<group>"; };
+		04D8D77720C7E0E9007D07BF /* UserInfoApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoApi.swift; sourceTree = "<group>"; };
+		04D8D77920C7E2CD007D07BF /* UserInfoApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoApi.h; sourceTree = "<group>"; };
+		04D8D77A20C7E2CD007D07BF /* UserInfoApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoApi.m; sourceTree = "<group>"; };
 		35BE533D4B2E0DF0D26FDCCC /* Pods-GTModuleLibrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GTModuleLibrary.release.xcconfig"; path = "Pods/Target Support Files/Pods-GTModuleLibrary/Pods-GTModuleLibrary.release.xcconfig"; sourceTree = "<group>"; };
 		6B31CC245455E1E99820B909 /* Pods_GTModuleLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GTModuleLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F513D1D26F8E50309593589A /* Pods-GTModuleLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GTModuleLibrary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GTModuleLibrary/Pods-GTModuleLibrary.debug.xcconfig"; sourceTree = "<group>"; };
@@ -784,6 +795,9 @@
 				04B5406220C631290001BBE6 /* AppDelegate.m */,
 				04B5406420C631290001BBE6 /* ViewController.h */,
 				04B5406520C631290001BBE6 /* ViewController.m */,
+				04D8D77920C7E2CD007D07BF /* UserInfoApi.h */,
+				04D8D77A20C7E2CD007D07BF /* UserInfoApi.m */,
+				04D8D77720C7E0E9007D07BF /* UserInfoApi.swift */,
 				04B5406720C631290001BBE6 /* Main.storyboard */,
 				04B5406A20C631290001BBE6 /* Assets.xcassets */,
 				04B5406C20C631290001BBE6 /* LaunchScreen.storyboard */,
@@ -833,10 +847,10 @@
 		04D8D43820C63620007D07BF /* GTCoreTool */ = {
 			isa = PBXGroup;
 			children = (
-				04D8D69520C787E5007D07BF /* LLDebugTool */,
-				04D8D67E20C778D7007D07BF /* GTRegularExpression */,
-				04D8D43E20C63B7D007D07BF /* GTNetWork */,
 				04D8D76820C78806007D07BF /* GTCoreTool.h */,
+				04D8D43E20C63B7D007D07BF /* GTNetWork */,
+				04D8D67E20C778D7007D07BF /* GTRegularExpression */,
+				04D8D69520C787E5007D07BF /* LLDebugTool */,
 			);
 			path = GTCoreTool;
 			sourceTree = "<group>";
@@ -882,6 +896,10 @@
 				04D8D68220C7790F007D07BF /* Accessory */,
 				04D8D44220C63BEA007D07BF /* GTBaseRequest.h */,
 				04D8D44320C63BEA007D07BF /* GTBaseRequest.m */,
+				04D8D77320C7DFB1007D07BF /* GTBatchRequest.h */,
+				04D8D77120C7DFB1007D07BF /* GTBatchRequest.m */,
+				04D8D77220C7DFB1007D07BF /* GTChainRequest.h */,
+				04D8D77420C7DFB1007D07BF /* GTChainRequest.m */,
 				04D8D68F20C77930007D07BF /* GTHTTPError.h */,
 				04D8D69020C77930007D07BF /* GTHTTPError.m */,
 				04D8D76A20C7888A007D07BF /* GTNetwork.h */,
@@ -2287,6 +2305,7 @@
 				04D8D75120C787E6007D07BF /* UIButton+LL_Utils.m in Sources */,
 				04D8D5EA20C66941007D07BF /* UIView+GTDraggable.m in Sources */,
 				04D8D74220C787E6007D07BF /* LLFilterLevelView.m in Sources */,
+				04D8D77620C7DFB1007D07BF /* GTChainRequest.m in Sources */,
 				04D8D64B20C6697E007D07BF /* NSNotificationCenter+GTKit.m in Sources */,
 				04D8D75220C787E6007D07BF /* UIDevice+LL_Swizzling.m in Sources */,
 				04D8D4AB20C66225007D07BF /* CALayer+GTAnimation.m in Sources */,
@@ -2367,6 +2386,7 @@
 				04D8D73420C787E6007D07BF /* LLCrashCell.m in Sources */,
 				04D8D51F20C6675D007D07BF /* GTFormSliderCell.m in Sources */,
 				04D8D64820C6697E007D07BF /* NSKeyedUnarchiver+GTKit.m in Sources */,
+				04D8D77820C7E0E9007D07BF /* UserInfoApi.swift in Sources */,
 				04D8D75C20C787E6007D07BF /* LLCrashHelper.m in Sources */,
 				04D8D5E120C66941007D07BF /* UIImageView+GTKit.m in Sources */,
 				04D8D46D20C65780007D07BF /* WKWebView+Post.m in Sources */,
@@ -2398,6 +2418,7 @@
 				04D8D52E20C6675D007D07BF /* GTFormRightImageButton.m in Sources */,
 				04D8D75920C787E6007D07BF /* LLBaseNavigationController.m in Sources */,
 				04D8D53220C6675D007D07BF /* NSObject+GTFormAdditions.m in Sources */,
+				04D8D77B20C7E2CD007D07BF /* UserInfoApi.m in Sources */,
 				04D8D68D20C7790F007D07BF /* YTKChainRequest+AnimatingAccessory.m in Sources */,
 				04D8D76120C787E6007D07BF /* LLSandboxModel.m in Sources */,
 				04D8D64620C6697E007D07BF /* NSBundle+GTKit.m in Sources */,
@@ -2411,6 +2432,7 @@
 				04D8D60E20C66941007D07BF /* UITextField+GTBlocks.m in Sources */,
 				04D8D64320C6697E007D07BF /* NSString+GTKit.m in Sources */,
 				04D8D74420C787E6007D07BF /* LLFilterFilePickerView.m in Sources */,
+				04D8D77520C7DFB1007D07BF /* GTBatchRequest.m in Sources */,
 				04D8D5FB20C66941007D07BF /* UIButton+GTButton.m in Sources */,
 				04D8D64C20C6697E007D07BF /* NSIndexPath+GTKit.m in Sources */,
 				04D8D47520C65780007D07BF /* UIScrollView+GTFullscreenPopGesture.m in Sources */,
