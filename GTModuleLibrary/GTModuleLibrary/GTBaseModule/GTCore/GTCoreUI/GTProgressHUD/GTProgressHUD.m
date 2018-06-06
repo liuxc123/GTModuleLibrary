@@ -114,7 +114,6 @@ NS_INLINE GTProgressHUD *settHUD(UIView *view, NSString *title, BOOL autoHidden)
     GTProgressHUD *hud = settHUD(view, text, YES);
     hud.mode = MBProgressHUDModeCustomView;
     hud.customView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"gt_hud_info@2x.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
-
 //    hud.square = YES;
 }
 
@@ -152,7 +151,7 @@ NS_INLINE GTProgressHUD *settHUD(UIView *view, NSString *title, BOOL autoHidden)
     GTProgressHUD *hud = settHUD(view, text, YES);
     hud.mode = MBProgressHUDModeCustomView;
     hud.customView = suc;
-//    hud.square = YES;
+    hud.square = YES;
 }
 
 + (void)showWarningMsg:(NSString *)text {
