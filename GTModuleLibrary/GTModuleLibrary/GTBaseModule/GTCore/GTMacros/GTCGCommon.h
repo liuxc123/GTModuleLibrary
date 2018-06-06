@@ -8,24 +8,64 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
+#import "GTCommon.h"
+
+/*
+ *  关于frame通用方法
+ */
 
 NS_ASSUME_NONNULL_BEGIN
+
+#pragma mark 屏幕 缩放比例
+GT_EXTERN CGFloat kScreenScale(void);
+
+#pragma mark 屏幕 bounds
+GT_EXTERN CGRect kScrentBounds(void);
+
+#pragma mark 屏幕 Size
+GT_EXTERN CGSize kScreenSize(void);
+
+#pragma mark 屏幕 width
+GT_EXTERN CGFloat kScreenWidth(void);
+
+#pragma mark 屏幕 height
+GT_EXTERN CGFloat kScreenHeight(void);
+
+#pragma mark 不同屏幕尺寸字体适配（414，736是因为效果图为IPHONE6 Plus 如果不是则根据实际情况修改）
+GT_EXTERN CGFloat kScreenWidthRatio(void);
+GT_EXTERN CGFloat kScreenHeightRatio(void);
+GT_EXTERN CGFloat kAdaptedWidth(CGFloat width);
+GT_EXTERN CGFloat kAdaptedHeight(CGFloat height);
+GT_EXTERN UIFont *kAdaptedFontSize(CGFloat fontSize);
+
+#pragma mark 导航栏高度
+GT_EXTERN CGFloat kNaviBarHeight(void);
+
+#pragma mark 状态栏高度
+GT_EXTERN CGFloat kStatusBarHeight(void);
+
+#pragma mark 导航栏与状态栏高度
+GT_EXTERN CGFloat kStatusBarAndNavigationBarHeight(void);
+
+#pragma mark Tabbar高度
+GT_EXTERN CGFloat kTabbarHeight(void);
+
+// iOS 11.0 的 view.safeAreaInsets
+#pragma mark Tabbar高度
+GT_EXTERN UIEdgeInsets kViewSafeAreaInsets(UIView *view);
+
+// iOS 11 一下的 scrollview 的适配
+GT_EXTERN void kAdjustsScrollViewInsetNever(UIViewController *controller, UIScrollView *view);
+
 
 /// Create an `ARGB` Bitmap context. Returns NULL if an error occurs.
 ///
 /// @discussion The function is same as UIGraphicsBeginImageContextWithOptions(),
 /// but it doesn't push the context to UIGraphic, so you can retain the context for reuse.
-CGContextRef _Nullable GTCGContextCreateARGBBitmapContext(CGSize size, BOOL opaque, CGFloat scale);
+GT_EXTERN CGContextRef _Nullable GTCGContextCreateARGBBitmapContext(CGSize size, BOOL opaque, CGFloat scale);
 
 /// Create a `DeviceGray` Bitmap context. Returns NULL if an error occurs.
-CGContextRef _Nullable GTCGContextCreateGrayBitmapContext(CGSize size, CGFloat scale);
-
-
-/// Get main screen's scale.
-CGFloat GTScreenScale(void);
-
-/// Get main screen's size. Height is always larger than width.
-CGSize GTScreenSize(void);
+GT_EXTERN CGContextRef _Nullable GTCGContextCreateGrayBitmapContext(CGSize size, CGFloat scale);
 
 /// Convert degrees to radians.
 static inline CGFloat DegreesToRadians(CGFloat degrees) {
@@ -66,10 +106,10 @@ static inline CGFloat CGAffineTransformGetTranslateY(CGAffineTransform transform
 
  @see http://stackoverflow.com/questions/13291796/calculate-values-for-a-cgaffinetransform-from-three-points-in-each-of-two-uiview
  */
-CGAffineTransform GTCGAffineTransformGetFromPoints(CGPoint before[_Nonnull 3], CGPoint after[_Nonnull 3]);
+GT_EXTERN CGAffineTransform GTCGAffineTransformGetFromPoints(CGPoint before[_Nonnull 3], CGPoint after[_Nonnull 3]);
 
 /// Get the transform which can converts a point from the coordinate system of a given view to another.
-CGAffineTransform GTCGAffineTransformGetFromViews(UIView *from, UIView *to);
+GT_EXTERN CGAffineTransform GTCGAffineTransformGetFromViews(UIView *from, UIView *to);
 
 /// Create a skew transform.
 static inline CGAffineTransform CGAffineTransformMakeSkew(CGFloat x, CGFloat y){
@@ -85,10 +125,10 @@ static inline UIEdgeInsets UIEdgeInsetsInvert(UIEdgeInsets insets) {
 }
 
 /// Convert CALayer's gravity string to UIViewContentMode.
-UIViewContentMode GTCAGravityToUIViewContentMode(NSString *gravity);
+GT_EXTERN UIViewContentMode GTCAGravityToUIViewContentMode(NSString *gravity);
 
 /// Convert UIViewContentMode to CALayer's gravity string.
-NSString *GTUIViewContentModeToCAGravity(UIViewContentMode contentMode);
+GT_EXTERN NSString *GTUIViewContentModeToCAGravity(UIViewContentMode contentMode);
 
 
 
@@ -101,7 +141,7 @@ NSString *GTUIViewContentModeToCAGravity(UIViewContentMode contentMode);
  @return A rectangle for the given content mode.
  @discussion UIViewContentModeRedraw is same as UIViewContentModeScaleToFill.
  */
-CGRect GTCGRectFitWithContentMode(CGRect rect, CGSize size, UIViewContentMode mode);
+GT_EXTERN CGRect GTCGRectFitWithContentMode(CGRect rect, CGSize size, UIViewContentMode mode);
 
 /// Returns the center for the rectangle.
 static inline CGPoint CGRectGetCenter(CGRect rect) {
@@ -142,37 +182,37 @@ static inline CGFloat CGPointGetDistanceToRect(CGPoint p, CGRect r) {
 
 /// Convert point to pixel.
 static inline CGFloat CGFloatToPixel(CGFloat value) {
-    return value * GTScreenScale();
+    return value * kScreenScale();
 }
 
 /// Convert pixel to point.
 static inline CGFloat CGFloatFromPixel(CGFloat value) {
-    return value / GTScreenScale();
+    return value / kScreenScale();
 }
 
 
 
 /// floor point value for pixel-aligned
 static inline CGFloat CGFloatPixelFloor(CGFloat value) {
-    CGFloat scale = GTScreenScale();
+    CGFloat scale = kScreenScale();
     return floor(value * scale) / scale;
 }
 
 /// round point value for pixel-aligned
 static inline CGFloat CGFloatPixelRound(CGFloat value) {
-    CGFloat scale = GTScreenScale();
+    CGFloat scale = kScreenScale();
     return round(value * scale) / scale;
 }
 
 /// ceil point value for pixel-aligned
 static inline CGFloat CGFloatPixelCeil(CGFloat value) {
-    CGFloat scale = GTScreenScale();
+    CGFloat scale = kScreenScale();
     return ceil(value * scale) / scale;
 }
 
 /// round point value to .5 pixel for path stroke (odd pixel line width pixel-aligned)
 static inline CGFloat CGFloatPixelHalf(CGFloat value) {
-    CGFloat scale = GTScreenScale();
+    CGFloat scale = kScreenScale();
     return (floor(value * scale) + 0.5) / scale;
 }
 
@@ -180,28 +220,28 @@ static inline CGFloat CGFloatPixelHalf(CGFloat value) {
 
 /// floor point value for pixel-aligned
 static inline CGPoint CGPointPixelFloor(CGPoint point) {
-    CGFloat scale = GTScreenScale();
+    CGFloat scale = kScreenScale();
     return CGPointMake(floor(point.x * scale) / scale,
                        floor(point.y * scale) / scale);
 }
 
 /// round point value for pixel-aligned
 static inline CGPoint CGPointPixelRound(CGPoint point) {
-    CGFloat scale = GTScreenScale();
+    CGFloat scale = kScreenScale();
     return CGPointMake(round(point.x * scale) / scale,
                        round(point.y * scale) / scale);
 }
 
 /// ceil point value for pixel-aligned
 static inline CGPoint CGPointPixelCeil(CGPoint point) {
-    CGFloat scale = GTScreenScale();
+    CGFloat scale = kScreenScale();
     return CGPointMake(ceil(point.x * scale) / scale,
                        ceil(point.y * scale) / scale);
 }
 
 /// round point value to .5 pixel for path stroke (odd pixel line width pixel-aligned)
 static inline CGPoint CGPointPixelHalf(CGPoint point) {
-    CGFloat scale = GTScreenScale();
+    CGFloat scale = kScreenScale();
     return CGPointMake((floor(point.x * scale) + 0.5) / scale,
                        (floor(point.y * scale) + 0.5) / scale);
 }
@@ -210,28 +250,28 @@ static inline CGPoint CGPointPixelHalf(CGPoint point) {
 
 /// floor point value for pixel-aligned
 static inline CGSize CGSizePixelFloor(CGSize size) {
-    CGFloat scale = GTScreenScale();
+    CGFloat scale = kScreenScale();
     return CGSizeMake(floor(size.width * scale) / scale,
                       floor(size.height * scale) / scale);
 }
 
 /// round point value for pixel-aligned
 static inline CGSize CGSizePixelRound(CGSize size) {
-    CGFloat scale = GTScreenScale();
+    CGFloat scale = kScreenScale();
     return CGSizeMake(round(size.width * scale) / scale,
                       round(size.height * scale) / scale);
 }
 
 /// ceil point value for pixel-aligned
 static inline CGSize CGSizePixelCeil(CGSize size) {
-    CGFloat scale = GTScreenScale();
+    CGFloat scale = kScreenScale();
     return CGSizeMake(ceil(size.width * scale) / scale,
                       ceil(size.height * scale) / scale);
 }
 
 /// round point value to .5 pixel for path stroke (odd pixel line width pixel-aligned)
 static inline CGSize CGSizePixelHalf(CGSize size) {
-    CGFloat scale = GTScreenScale();
+    CGFloat scale = kScreenScale();
     return CGSizeMake((floor(size.width * scale) + 0.5) / scale,
                       (floor(size.height * scale) + 0.5) / scale);
 }

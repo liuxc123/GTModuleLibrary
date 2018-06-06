@@ -1730,7 +1730,7 @@ typedef NS_ENUM(NSInteger, GTBackgroundStyle) {
 
     __weak typeof(self) wself = self;
     [self.alertItemArray enumerateObjectsUsingBlock:^(id  _Nonnull item, NSUInteger idx, BOOL * _Nonnull stop) {
-        __strong typeof(self) strongSelf = wself;
+        __strong typeof(wself) strongSelf = wself;
 
         if (idx == 0) strongSelf->alertViewHeight += self.config.modelHeaderInsets.top;
         

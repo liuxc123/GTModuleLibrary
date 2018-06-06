@@ -11,5 +11,7 @@
 
 #import "GTCommon.h"
 #import "GTCGCommon.h"
+#import "GTSystemCommon.h"
+#import "GTFunctionCommon.h"
 
 #endif /* GTMacros_h */

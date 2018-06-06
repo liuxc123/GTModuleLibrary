@@ -24,5 +24,8 @@ target 'GTModuleLibrary' do
   #提示工具
   pod 'MBProgressHUD'
 
+  #数据库工具
+  pod 'FMDB'
+
 
 end

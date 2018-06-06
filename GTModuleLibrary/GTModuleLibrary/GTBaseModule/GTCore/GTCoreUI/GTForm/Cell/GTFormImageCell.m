@@ -101,7 +101,7 @@
 
      __weak typeof(self) wself = self;
     dispatch_async(dispatch_get_main_queue(), ^{
-        __strong typeof(self) strongSelf = wself;
+        __strong typeof(wself) strongSelf = wself;
         [self.formViewController presentViewController:strongSelf->alertController animated: true completion: nil];
     });
 }

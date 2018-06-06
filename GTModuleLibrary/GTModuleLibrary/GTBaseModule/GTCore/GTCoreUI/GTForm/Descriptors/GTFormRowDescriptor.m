@@ -159,7 +159,7 @@ CGFloat GTFormRowInitialHeight = -2;
 {
     __weak typeof(self) wself = self;
     [self.cellConfigAtConfigure enumerateKeysAndObjectsUsingBlock:^(NSString *keyPath, id value, __unused BOOL *stop) {
-        __strong typeof(self) strongSelf = wself;
+        __strong typeof(wself) strongSelf = wself;
         [strongSelf->_cell setValue:(value == [NSNull null]) ? nil : value forKeyPath:keyPath];
     }];
 }

@@ -14,9 +14,9 @@
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        ExchangeImplementations([self class], @selector(initWithFrame:), @selector(gt_initWithFrame:));
-        ExchangeImplementations([self class], @selector(initWithCoder:), @selector(gt_initWithCoder:));
-        ExchangeImplementations([self class], @selector(layoutSublayersOfLayer:), @selector(gt_layoutSublayersOfLayer:));
+        kObjc_ReplaceMethod([self class], @selector(initWithFrame:), @selector(gt_initWithFrame:));
+        kObjc_ReplaceMethod([self class], @selector(initWithCoder:), @selector(gt_initWithCoder:));
+        kObjc_ReplaceMethod([self class], @selector(layoutSublayersOfLayer:), @selector(gt_layoutSublayersOfLayer:));
     });
 }
 

@@ -8,10 +8,110 @@
 
 #import "GTCGCommon.h"
 #import <Accelerate/Accelerate.h>
+#import "GTSystemCommon.h"
 #import "UIView+GTKit.h"
 
+GT_EXTERN CGFloat kScreenScale() {
+    static CGFloat scale;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        scale = [UIScreen mainScreen].scale;
+    });
+    return scale;
+}
 
-CGContextRef GTCGContextCreateARGBBitmapContext(CGSize size, BOOL opaque, CGFloat scale) {
+GT_EXTERN CGRect kScrentBounds(void) {
+    return [[UIScreen mainScreen] bounds];
+}
+
+GT_EXTERN CGSize kScreenSize() {
+    static CGSize size;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        size = [UIScreen mainScreen].bounds.size;
+        if (size.height < size.width) {
+            CGFloat tmp = size.height;
+            size.height = size.width;
+            size.width = tmp;
+        }
+    });
+    return size;
+}
+
+
+GT_EXTERN CGFloat kScreenWidth(void) {
+    return (([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait) || ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown)) ? [[UIScreen mainScreen] bounds].size.width : [[UIScreen mainScreen] bounds].size.height;
+}
+GT_EXTERN CGFloat kScreenHeight(void) {
+    return ((([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait) || ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown)) ? [[UIScreen mainScreen] bounds].size.height : [[UIScreen mainScreen] bounds].size.width);
+}
+
+
+GT_EXTERN CGFloat kScreenWidthRatio(void) {
+    return kScreenWidth() / 414.0;
+}
+
+GT_EXTERN CGFloat kScreenHeightRatio(void) {
+    return kScreenHeight() / 736.0;
+}
+
+GT_EXTERN CGFloat kAdaptedWidth(CGFloat width) {
+    return (CGFloat)ceilf(width) * kScreenWidthRatio();
+}
+
+GT_EXTERN CGFloat kAdaptedHeight(CGFloat height) {
+    return (CGFloat)ceilf(height) * kScreenHeightRatio();
+}
+
+
+GT_EXTERN UIFont *kAdaptedFontSize(CGFloat fontSize) {
+ return kCHINESE_SYSTEM(kAdaptedWidth(fontSize));
+}
+
+
+//导航栏高度
+GT_EXTERN CGFloat kNaviBarHeight(void) {
+    return 44.0;
+}
+
+//状态栏高度
+GT_EXTERN CGFloat kStatusBarHeight(void) {
+    return [[UIApplication sharedApplication] statusBarFrame].size.height;
+}
+
+//导航栏与状态栏高度
+GT_EXTERN CGFloat kStatusBarAndNavigationBarHeight(void) {
+    return kNaviBarHeight() + kStatusBarHeight();
+}
+
+//tabbar高度
+GT_EXTERN CGFloat kTabbarHeight(void) {
+    return [[UIApplication sharedApplication] statusBarFrame].size.height > 20 ? 83 : 49;
+}
+
+
+// iOS 11.0 的 view.safeAreaInsets
+GT_EXTERN UIEdgeInsets kViewSafeAreaInsets(UIView *view) {
+    UIEdgeInsets i;
+    if(@available(iOS 11.0, *)) {
+        i = view.safeAreaInsets;
+    } else {
+        i = UIEdgeInsetsZero;
+    }
+    return i;
+}
+
+// iOS 11 一下的 scrollview 的适配
+GT_EXTERN void kAdjustsScrollViewInsetNever(UIViewController *controller, UIScrollView *view) {
+    if(@available(iOS 11.0, *)) {
+        view.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else if([controller isKindOfClass:[UIViewController class]]) {
+        controller.automaticallyAdjustsScrollViewInsets = false;
+    }
+}
+
+
+GT_EXTERN CGContextRef GTCGContextCreateARGBBitmapContext(CGSize size, BOOL opaque, CGFloat scale) {
     size_t width = ceil(size.width * scale);
     size_t height = ceil(size.height * scale);
     if (width < 1 || height < 1) return NULL;
@@ -28,7 +128,7 @@ CGContextRef GTCGContextCreateARGBBitmapContext(CGSize size, BOOL opaque, CGFloa
     return context;
 }
 
-CGContextRef GTCGContextCreateGrayBitmapContext(CGSize size, CGFloat scale) {
+GT_EXTERN CGContextRef GTCGContextCreateGrayBitmapContext(CGSize size, CGFloat scale) {
     size_t width = ceil(size.width * scale);
     size_t height = ceil(size.height * scale);
     if (width < 1 || height < 1) return NULL;
@@ -45,28 +145,6 @@ CGContextRef GTCGContextCreateGrayBitmapContext(CGSize size, CGFloat scale) {
     return context;
 }
 
-CGFloat GTScreenScale() {
-    static CGFloat scale;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        scale = [UIScreen mainScreen].scale;
-    });
-    return scale;
-}
-
-CGSize GTScreenSize() {
-    static CGSize size;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        size = [UIScreen mainScreen].bounds.size;
-        if (size.height < size.width) {
-            CGFloat tmp = size.height;
-            size.height = size.width;
-            size.width = tmp;
-        }
-    });
-    return size;
-}
 
 // return 0 when succeed
 static int matrix_invert(__CLPK_integer N, double *matrix) {
@@ -101,7 +179,7 @@ static int matrix_invert(__CLPK_integer N, double *matrix) {
     return error;
 }
 
-CGAffineTransform GTCGAffineTransformGetFromPoints(CGPoint before[3], CGPoint after[3]) {
+GT_EXTERN CGAffineTransform GTCGAffineTransformGetFromPoints(CGPoint before[3], CGPoint after[3]) {
     if (before == NULL || after == NULL) return CGAffineTransformIdentity;
 
     CGPoint p1, p2, p3, q1, q2, q3;
@@ -134,7 +212,7 @@ CGAffineTransform GTCGAffineTransformGetFromPoints(CGPoint before[3], CGPoint af
     return transform;
 }
 
-CGAffineTransform GTCGAffineTransformGetFromViews(UIView *from, UIView *to) {
+GT_EXTERN CGAffineTransform GTCGAffineTransformGetFromViews(UIView *from, UIView *to) {
     if (!from || !to) return CGAffineTransformIdentity;
 
     CGPoint before[3], after[3];
@@ -148,7 +226,7 @@ CGAffineTransform GTCGAffineTransformGetFromViews(UIView *from, UIView *to) {
     return GTCGAffineTransformGetFromPoints(before, after);
 }
 
-UIViewContentMode GTCAGravityToUIViewContentMode(NSString *gravity) {
+GT_EXTERN UIViewContentMode GTCAGravityToUIViewContentMode(NSString *gravity) {
     static NSDictionary *dic;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -169,7 +247,7 @@ UIViewContentMode GTCAGravityToUIViewContentMode(NSString *gravity) {
     return (UIViewContentMode)((NSNumber *)dic[gravity]).integerValue;
 }
 
-NSString *GTUIViewContentModeToCAGravity(UIViewContentMode contentMode) {
+GT_EXTERN NSString *GTUIViewContentModeToCAGravity(UIViewContentMode contentMode) {
     switch (contentMode) {
         case UIViewContentModeScaleToFill: return kCAGravityResize;
         case UIViewContentModeScaleAspectFit: return kCAGravityResizeAspect;
@@ -188,7 +266,7 @@ NSString *GTUIViewContentModeToCAGravity(UIViewContentMode contentMode) {
     }
 }
 
-CGRect GTCGRectFitWithContentMode(CGRect rect, CGSize size, UIViewContentMode mode) {
+GT_EXTERN CGRect GTCGRectFitWithContentMode(CGRect rect, CGSize size, UIViewContentMode mode) {
     rect = CGRectStandardize(rect);
     size.width = size.width < 0 ? -size.width : size.width;
     size.height = size.height < 0 ? -size.height : size.height;
@@ -267,5 +345,4 @@ CGRect GTCGRectFitWithContentMode(CGRect rect, CGSize size, UIViewContentMode mo
     }
     return rect;
 }
-
 

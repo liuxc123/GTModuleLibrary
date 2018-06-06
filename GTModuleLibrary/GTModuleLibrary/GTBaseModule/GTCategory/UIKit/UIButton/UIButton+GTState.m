@@ -113,9 +113,9 @@
 #pragma mark - lefe cycle
 
 + (void)load {
-    ExchangeImplementations([self class], @selector(setHighlighted:), @selector(gt_setHighlighted:));
-    ExchangeImplementations([self class], @selector(setEnabled:), @selector(gt_setEnabled:));
-    ExchangeImplementations([self class], @selector(setSelected:), @selector(gt_setSelected:));
+    kObjc_ReplaceMethod([self class], @selector(setHighlighted:), @selector(gt_setHighlighted:));
+    kObjc_ReplaceMethod([self class], @selector(setEnabled:), @selector(gt_setEnabled:));
+    kObjc_ReplaceMethod([self class], @selector(setSelected:), @selector(gt_setSelected:));
 }
 
 #pragma mark - public method
