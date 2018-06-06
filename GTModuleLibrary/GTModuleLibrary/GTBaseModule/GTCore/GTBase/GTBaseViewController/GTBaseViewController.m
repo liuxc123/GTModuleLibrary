@@ -176,7 +176,7 @@
 
     if (status == RealStatusNotReachable)
     {
-        [GTProgressHUD showMessage:@"当前网络连接失败，请查看设置" view:self.view];
+        [GTProgressHUD showInfoMsg:@"当前网络连接失败，请查看设置" view:self.view];
     }
 
     if (status == RealStatusViaWiFi)

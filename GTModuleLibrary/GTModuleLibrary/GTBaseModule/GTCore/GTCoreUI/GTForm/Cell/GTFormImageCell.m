@@ -99,8 +99,10 @@
         alertController.popoverPresentationController.sourceRect = self.contentView.bounds;
     }
 
+     __weak typeof(self) wself = self;
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self.formViewController presentViewController:alertController animated: true completion: nil];
+        __strong typeof(self) strongSelf = wself;
+        [self.formViewController presentViewController:strongSelf->alertController animated: true completion: nil];
     });
 }
 

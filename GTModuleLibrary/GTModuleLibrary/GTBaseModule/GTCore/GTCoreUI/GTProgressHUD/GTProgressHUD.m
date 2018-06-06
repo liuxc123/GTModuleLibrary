@@ -35,12 +35,18 @@ NS_INLINE GTProgressHUD *settHUD(UIView *view, NSString *title, BOOL autoHidden)
     //设置副标题字体大小
     hud.detailsLabel.font = [UIFont boldSystemFontOfSize:TEXT_SIZE];
 
+    if (GTDefaultHudStyle == 0) {
+        hud.hudContentStyle(GTHUDContentDefaultStyle);
+    }
+
     //设置默认风格
     if (GTDefaultHudStyle == 1) {
         hud.hudContentStyle(GTHUDContentBlackStyle);
+        hud.tintColor = [UIColor whiteColor];
 
     } else if (GTDefaultHudStyle == 2) {
         hud.hudContentStyle(GTHUDContentCustomStyle);
+        hud.tintColor = GTCustomHudStyleContentColor;
     }
 
     if (autoHidden) {
@@ -107,8 +113,9 @@ NS_INLINE GTProgressHUD *settHUD(UIView *view, NSString *title, BOOL autoHidden)
 +  (void)showInfoMsg:(NSString *)text view:(UIView *)view {
     GTProgressHUD *hud = settHUD(view, text, YES);
     hud.mode = MBProgressHUDModeCustomView;
-    hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"gt_hud_info@2x.png"]];
-    hud.square = YES;
+    hud.customView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"gt_hud_info@2x.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
+
+//    hud.square = YES;
 }
 
 + (void)showSuccess:(NSString *)text {
@@ -127,7 +134,7 @@ NS_INLINE GTProgressHUD *settHUD(UIView *view, NSString *title, BOOL autoHidden)
     GTProgressHUD *hud = settHUD(view, text, YES);
     hud.mode = MBProgressHUDModeCustomView;
     hud.customView = suc;
-    hud.square = YES;
+//    hud.square = YES;
 }
 
 + (void)showFailure:(NSString *)text {
@@ -145,7 +152,7 @@ NS_INLINE GTProgressHUD *settHUD(UIView *view, NSString *title, BOOL autoHidden)
     GTProgressHUD *hud = settHUD(view, text, YES);
     hud.mode = MBProgressHUDModeCustomView;
     hud.customView = suc;
-    hud.square = YES;
+//    hud.square = YES;
 }
 
 + (void)showWarningMsg:(NSString *)text {
@@ -155,7 +162,7 @@ NS_INLINE GTProgressHUD *settHUD(UIView *view, NSString *title, BOOL autoHidden)
 + (void)showWarningMsg:(NSString *)text view:(UIView *)view {
     GTProgressHUD *hud = settHUD(view, text, YES);
     hud.mode = MBProgressHUDModeCustomView;
-    hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"gt_hud_warning.png"]];
+    hud.customView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"gt_hud_warning.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
     hud.square = YES;
 }
 
@@ -179,7 +186,7 @@ NS_INLINE GTProgressHUD *settHUD(UIView *view, NSString *title, BOOL autoHidden)
     // Set the custom view mode to show any view.
     hud.mode = MBProgressHUDModeCustomView;
     // Set an image view with a checkmark.
-    hud.customView = [[UIImageView alloc] initWithImage:image];
+    hud.customView = [[UIImageView alloc] initWithImage:[image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
     // Looks a bit nicer if we make it square.
     hud.square = YES;
 }
@@ -343,7 +350,7 @@ NS_INLINE GTProgressHUD *settHUD(UIView *view, NSString *title, BOOL autoHidden)
 
 - (MBProgressHUD *(^)(NSString *))customIcon {
     return ^(NSString *customIcon) {
-        self.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:customIcon]];
+        self.customView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:customIcon] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
         return self;
     };
 }
@@ -387,16 +394,19 @@ NS_INLINE GTProgressHUD *settHUD(UIView *view, NSString *title, BOOL autoHidden)
     return ^(GTHUDContentStyle hudContentStyle){
         if (hudContentStyle == GTHUDContentBlackStyle) {
             self.contentColor = [UIColor whiteColor];
+            self.tintColor = [UIColor whiteColor];
             self.bezelView.backgroundColor = [UIColor blackColor];
             self.bezelView.style = MBProgressHUDBackgroundStyleBlur;
 
         } else if (hudContentStyle == GTHUDContentCustomStyle) {
             self.contentColor = GTCustomHudStyleContentColor;
+            self.tintColor = GTCustomHudStyleContentColor;
             self.bezelView.backgroundColor = GTCustomHudStyleBackgrandColor;
             self.bezelView.style = MBProgressHUDBackgroundStyleBlur;
 
         } else if (hudContentStyle == GTHUDContentDefaultStyle){
             self.contentColor = [UIColor blackColor];
+            self.tintColor = [UIColor blackColor];
             self.bezelView.backgroundColor = [UIColor colorWithWhite:0.902 alpha:1.000];
             self.bezelView.style = MBProgressHUDBackgroundStyleBlur;
 

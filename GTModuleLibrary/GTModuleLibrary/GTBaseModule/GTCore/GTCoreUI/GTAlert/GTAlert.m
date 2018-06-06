@@ -1728,10 +1728,11 @@ typedef NS_ENUM(NSInteger, GTBackgroundStyle) {
     
     CGFloat alertViewMaxWidth = self.config.modelMaxWidthBlock(self.orientationType);
 
-
+    __weak typeof(self) wself = self;
     [self.alertItemArray enumerateObjectsUsingBlock:^(id  _Nonnull item, NSUInteger idx, BOOL * _Nonnull stop) {
-        
-        if (idx == 0) alertViewHeight += self.config.modelHeaderInsets.top;
+        __strong typeof(self) strongSelf = wself;
+
+        if (idx == 0) strongSelf->alertViewHeight += self.config.modelHeaderInsets.top;
         
         if ([item isKindOfClass:UIView.class]) {
             
@@ -1741,7 +1742,7 @@ typedef NS_ENUM(NSInteger, GTBackgroundStyle) {
             
             viewFrame.origin.x = self.config.modelHeaderInsets.left + view.item.insets.left + VIEWSAFEAREAINSETS(view).left;
             
-            viewFrame.origin.y = alertViewHeight + view.item.insets.top;
+            viewFrame.origin.y = strongSelf->alertViewHeight + view.item.insets.top;
             
             viewFrame.size.width = alertViewMaxWidth - viewFrame.origin.x - self.config.modelHeaderInsets.right - view.item.insets.right - VIEWSAFEAREAINSETS(view).left - VIEWSAFEAREAINSETS(view).right;
             
@@ -1749,7 +1750,7 @@ typedef NS_ENUM(NSInteger, GTBackgroundStyle) {
             
             view.frame = viewFrame;
             
-            alertViewHeight += view.frame.size.height + view.item.insets.top + view.item.insets.bottom;
+            strongSelf->alertViewHeight += view.frame.size.height + view.item.insets.top + view.item.insets.bottom;
             
         } else if ([item isKindOfClass:GTCustomView.class]) {
             
@@ -1788,14 +1789,14 @@ typedef NS_ENUM(NSInteger, GTBackgroundStyle) {
                     break;
             }
             
-            viewFrame.origin.y = alertViewHeight + custom.item.insets.top;
+            viewFrame.origin.y = strongSelf->alertViewHeight + custom.item.insets.top;
             
             custom.view.frame = viewFrame;
             
-            alertViewHeight += viewFrame.size.height + custom.item.insets.top + custom.item.insets.bottom;
+            strongSelf->alertViewHeight += viewFrame.size.height + custom.item.insets.top + custom.item.insets.bottom;
         }
         
-        if (item == self.alertItemArray.lastObject) alertViewHeight += self.config.modelHeaderInsets.bottom;
+        if (item == self.alertItemArray.lastObject) strongSelf->alertViewHeight += self.config.modelHeaderInsets.bottom;
     }];
     
     for (GTActionButton *button in self.alertActionArray) {
