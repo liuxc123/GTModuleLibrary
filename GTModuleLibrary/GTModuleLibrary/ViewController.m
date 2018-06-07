@@ -8,8 +8,7 @@
 
 #import "ViewController.h"
 #import "GTFunctionCommon.h"
-#import "UserInfoApi.h"
-
+#import "GTModuleLibrary-Swift.h"
 @interface ViewController ()
 
 @end
@@ -18,17 +17,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
 
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     UserInfoApi *api = [[UserInfoApi alloc] init];
 
+    api.animatingText = @"加载中";
+    api.animatingView = self.view;
+
     [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
-
+        NSLog(@"jsonDic = %@", [api parsmDataValue]);
+        NSLog(@"jsonString = %@", [api parsmDataValueWithJsonString]);
     } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
-
+        NSLog(@"failed");
     }];
 
-    
 
 }
 

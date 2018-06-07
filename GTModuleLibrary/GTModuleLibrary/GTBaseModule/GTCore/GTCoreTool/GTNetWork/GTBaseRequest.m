@@ -14,13 +14,13 @@
 #import "GTCategory.h"
 
 // 获取服务器响应状态码 key
-NSString *const GT_BaseRequest_StatusCodeKey = @"statusCode";
-// 服务器响应数据成功状态码 value
-NSString *const GT_BaseRequest_DataValueKey = @"0000";
+NSString *const GT_BaseRequest_StatusCodeKey = @"code";
 // 获取服务器响应状态信息 key
-NSString *const GT_BaseRequest_StatusMsgKey = @"statusMsg";
+NSString *const GT_BaseRequest_StatusMsgKey = @"desc";
 // 获取服务器响应数据 key
-NSString *const GT_BaseRequest_DataKey = @"data";;
+NSString *const GT_BaseRequest_DataKey = @"data";
+// 服务器响应数据成功状态码 value
+NSInteger const GT_BaseRequest_DataValue = 0;
 
 @implementation GTBaseRequest
 
@@ -126,16 +126,16 @@ NSString *const GT_BaseRequest_DataKey = @"data";;
         //根据error的code去定义显示的信息，保证显示的内容可以便捷的控制
     }
     self.httpError = [[GTHTTPError alloc] initWithDomain:self.error.domain code:self.error.code userInfo:[self.error.userInfo copy]];
+
+    if (![self isHideErrorToast]) {
+        [GTProgressHUD showMessage:self.error.localizedDescription];
+    }
 }
 
 //请求失败过滤
 - (void)requestFailedFilter
 {
     [super requestFailedPreprocessor];
-
-    if (![self isHideErrorToast]) {
-        [GTProgressHUD showMessage:self.error.localizedDescription];
-    }
 }
 
 // 验证状态码
@@ -143,8 +143,8 @@ NSString *const GT_BaseRequest_DataKey = @"data";;
 {
     NSDictionary *responseDict = [super responseJSONObject];
     // 验证服务端返回验证码
-    NSString *stCode = kDecodeStringFromDic(responseDict, GT_BaseRequest_StatusCodeKey);
-    if ([stCode isEqualToString:GT_BaseRequest_DataValueKey]) {
+    NSInteger stCode = kDecodeNumberFromDic(responseDict, GT_BaseRequest_StatusCodeKey).integerValue;
+    if (stCode == GT_BaseRequest_DataValue) {
         // 请求成功
         return YES;
     }else{
@@ -153,6 +153,36 @@ NSString *const GT_BaseRequest_DataKey = @"data";;
     }
 }
 
+- (NSDictionary<NSString *,NSString *> *)requestHeaderFieldValueDictionary {
+    return @{@"User-Agent": @"APP,,iPhone,Simulator,iOS 11.3,2.2.2,,,Wifi,14,App Store,414*736,2.2",
+             @"user-id": @"5"};
+}
+
+/**
+ 数据库请求成功后返回的data数据
+
+ @return 返回  NSDictionary类型的 data 数据
+ */
+- (NSDictionary *)parsmDataValue {
+    NSDictionary *dic = [[self parsmDataValueWithJsonString] gt_dictionaryValue];
+    return dic ?: @{};
+}
+
+
+/**
+ 数据库请求成功后返回的data数据
+
+ @return 返回  json字符串类型的 data 数据
+ */
+- (NSString *)parsmDataValueWithJsonString {
+    NSString *dataJsonString = [kDecodeStringFromDic(self.responseObject, GT_BaseRequest_DataKey) gt_base64DecodedString];
+    return dataJsonString ?: @"";
+}
+
+
+- (id)parsmDataModel {
+    return nil;
+}
 
 
 #pragma mark - Subclass Ovrride
@@ -165,6 +195,8 @@ NSString *const GT_BaseRequest_DataKey = @"data";;
 {
     return jsonResponse;
 }
+
+
 
 @end
   

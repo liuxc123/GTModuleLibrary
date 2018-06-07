@@ -11,12 +11,12 @@
 
 // 获取服务器响应状态码 key
 FOUNDATION_EXTERN NSString *const GT_BaseRequest_StatusCodeKey;
-// 服务器响应数据成功状态码 value
-FOUNDATION_EXTERN NSString *const GT_BaseRequest_DataValueKey;
 // 获取服务器响应状态信息 key
 FOUNDATION_EXTERN NSString *const GT_BaseRequest_StatusMsgKey;
 // 获取服务器响应数据 key
 FOUNDATION_EXTERN NSString *const GT_BaseRequest_DataKey;
+// 服务器响应数据成功状态码 value
+FOUNDATION_EXTERN NSInteger const GT_BaseRequest_DataValue;
 
 @class GTHTTPError;
 
@@ -25,6 +25,31 @@ FOUNDATION_EXTERN NSString *const GT_BaseRequest_DataKey;
 @property (nonatomic,strong) GTHTTPError * httpError;
 
 - (BOOL)isHideErrorToast;
+
+/**
+ 数据库请求成功后返回的data数据
+
+ @return 返回  NSDictionary类型的 data 数据
+ */
+- (NSDictionary *)parsmDataValue;
+
+
+/**
+ 数据库请求成功后返回的data数据
+
+ @return 返回  json字符串类型的 data 数据
+ */
+- (NSString *)parsmDataValueWithJsonString;
+
+
+
+/**
+  数据库请求成功后返回的data数据
+
+ @return 返回 Model类型的 data 数据
+ */
+- (id)parsmDataValueWithModel:(Class)c;
+
 
 #pragma mark - Override
 
@@ -35,6 +60,8 @@ FOUNDATION_EXTERN NSString *const GT_BaseRequest_DataKey;
  */
 - (NSDictionary *)reformParams;
 
+
+
 /**
  自定义解析器解析响应参数
 
@@ -42,5 +69,10 @@ FOUNDATION_EXTERN NSString *const GT_BaseRequest_DataKey;
  @return 解析后的json
  */
 - (id)reformJSONResponse:(id)jsonResponse;
+
+
+
+
+
 
 @end

@@ -37,11 +37,9 @@ static LLConfig *_instance = nil;
 }
 
 - (void)setColorStyle:(LLConfigColorStyle)colorStyle {
-//    if (_colorStyle != colorStyle) {
         _colorStyle = colorStyle;
         _useSystemColor = NO;
         [self updateColor];
-//    }
 }
 
 - (void)configBackgroundColor:(UIColor *)backgroundColor textColor:(UIColor *)textColor statusBarStyle:(UIStatusBarStyle)statusBarStyle {

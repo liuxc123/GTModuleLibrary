@@ -18,14 +18,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    YTKNetworkAgent *agent = [YTKNetworkAgent sharedAgent];
-    [agent setValue:[NSSet setWithObjects:@"application/json", @"text/plain", @"text/javascript", @"text/json",@"text/html",@"text/css", nil] forKeyPath:@"_manager.responseSerializer.acceptableContentTypes"];
-
     YTKNetworkConfig *config = [YTKNetworkConfig sharedConfig];
-    config.debugLogEnabled = DEBUG;
+    config.debugLogEnabled = YES;
     config.baseUrl = @"http://test.debug.webus.vip";
-
-
 
 
     return YES;

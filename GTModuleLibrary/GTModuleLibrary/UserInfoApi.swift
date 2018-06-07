@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ObjectMapper
 
 class UserInfoApi: GTBaseRequest {
 
@@ -15,7 +16,18 @@ class UserInfoApi: GTBaseRequest {
     }
 
     override func reformParams() -> [AnyHashable : Any]! {
-        return ["user_id": 1]
+        return ["user_id": 5]
+    }
+
+
+
+    open func parsmData() -> TestModel {
+        //转化model
+        if let testModel = Mapper<TestModel>().map(JSONString: self.parsmDataValueWithJsonString()) {
+            return testModel
+        } else {
+            return TestModel()
+        }
     }
 
 

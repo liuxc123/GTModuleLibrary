@@ -7,8 +7,8 @@
 //
 
 #import "YTKAnimatingRequestAccessory.h"
-//#import "YTKAlertUtils.h"
 #import "GTProgressHUD.h"
+#import "GTMacros.h"
 
 @implementation YTKAnimatingRequestAccessory
 
@@ -39,24 +39,21 @@
 
 - (void)requestWillStart:(id)request {
     if (_animatingView) {
-        __weak typeof(self) wself = self;
         dispatch_async(dispatch_get_main_queue(), ^{
-            __strong typeof(wself) strongSelf = wself;
             // TODO: show loading
             NSLog(@" loading start");
-            [GTProgressHUD showLoading:strongSelf->_animatingText view:strongSelf->_animatingView];
+            [GTProgressHUD showLoading:self->_animatingText view:self->_animatingView];
         });
     }
 }
 
 - (void)requestWillStop:(id)request {
     if (_animatingView) {
-        __weak typeof(self) wself = self;
         dispatch_async(dispatch_get_main_queue(), ^{
-            __strong typeof(wself) strongSelf = wself;
+
             // TODO: hide loading
             NSLog(@" loading finished");
-            [GTProgressHUD hideHUDForView:strongSelf->_animatingView animated:YES];
+            [GTProgressHUD hideHUDForView:self->_animatingView animated:YES];
         });
     }
 }

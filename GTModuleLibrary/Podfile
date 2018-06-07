@@ -27,5 +27,8 @@ target 'GTModuleLibrary' do
   #数据库工具
   pod 'FMDB'
 
+  #JSON解析工具
+  pod 'ObjectMapper'
+
 
 end

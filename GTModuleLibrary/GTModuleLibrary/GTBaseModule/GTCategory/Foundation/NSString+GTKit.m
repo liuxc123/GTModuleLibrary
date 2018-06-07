@@ -86,9 +86,21 @@
     return [[self dataUsingEncoding:NSUTF8StringEncoding] gt_base64EncodedString];
 }
 
+
 + (NSString *)gt_stringWithBase64EncodedString:(NSString *)base64EncodedString {
     NSData *data = [NSData gt_dataWithBase64EncodedString:base64EncodedString];
     return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+}
+
+/**
+ Returns an NSString for base64 decoded.
+ */
+- (nullable NSString *)gt_base64DecodedString {
+    return [NSString gt_stringWithBase64EncodedString:self];
+}
+
+- (nullable NSData *)gt_base64DecodedData {
+    return [NSData gt_dataWithBase64EncodedString:self];
 }
 
 - (NSString *)gt_stringByURLEncode {
@@ -192,6 +204,18 @@
     }
     free(buf);
     return result;
+}
+
+
+- (NSDictionary *)gt_dictionaryValue {
+    NSError *errorJson;
+    NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:[self dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&errorJson];
+    if (errorJson != nil) {
+#ifdef DEBUG
+        NSLog(@"fail to get dictioanry from JSON: %@, error: %@", self, errorJson);
+#endif
+    }
+    return jsonDict;
 }
 
 #pragma mark - Drawing

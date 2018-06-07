@@ -113,6 +113,17 @@ NS_ASSUME_NONNULL_BEGIN
 - (nullable NSString *)gt_base64EncodedString;
 
 /**
+ Returns an NSString for base64 decoded.
+ */
+- (nullable NSString *)gt_base64DecodedString;
+
+/**
+ Returns an NSData for base64 decoded.
+ */
+- (nullable NSData *)gt_base64DecodedData;
+
+
+/**
  Returns an NSString from base64 encoded string.
  @param base64EncodedString The encoded string.
  */
@@ -135,6 +146,18 @@ NS_ASSUME_NONNULL_BEGIN
  Example: "a>b" will be escape to "a&gt;b".
  */
 - (NSString *)gt_stringByEscapingHTML;
+
+
+#pragma mark - JSON NSDictionary
+///=============================================================================
+/// @name Encode and decode
+///=============================================================================
+/**
+ *  @brief  JSON字符串转成NSDictionary
+ *
+ *  @return NSDictionary
+ */
+- (NSDictionary *)gt_dictionaryValue;
 
 #pragma mark - Drawing
 ///=============================================================================

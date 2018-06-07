@@ -243,6 +243,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (nullable NSString *)gt_base64EncodedString;
 
+
 /**
  Returns an NSData from base64 encoded string.
 
