@@ -191,10 +191,6 @@ NSInteger const GT_BaseRequest_DataValue = 0;
     return @{};
 }
 
-- (id)reformJSONResponse:(id)jsonResponse
-{
-    return jsonResponse;
-}
 
 
 
