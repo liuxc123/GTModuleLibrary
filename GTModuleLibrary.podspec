@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
 
 
   s.homepage     = "http://EXAMPLE/GTModuleLibrary"
-  s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
   s.author             = { "liuxc123" => "lxc_work@126.com" }
   s.source       = { :git => 'https://github.com/liuxc123/GTModuleLibrary.git', :tag => s.version.to_s }
 
@@ -15,17 +15,24 @@ Pod::Spec.new do |s|
   # 设置默认的模块，如果在pod文件中导入pod项目没有指定子模块，导入的是这里指定的模块
   s.default_subspec = 'GTCore'
 
+  s.requires_arc = true
+
+
 
   # 定义一个核心模块，用户存放抽象的接口、基类以及一些公用的工具类和头文件
   s.subspec 'GTCore' do |subspec|
       # 源代码
       subspec.source_files = 'GTModuleLibrary/GTModuleLibrary/GTBaseModule/GTCore/**/*.*'
-          # 添加资源文件
-      subspec.resource = 'GTModuleLibrary/GTModuleLibrary/GTBaseModule/GTCore/**/*.{bundle, png}'
+      
+      # 添加资源文件
+      subspec.resources = 'GTModuleLibrary/GTModuleLibrary/GTBaseModule/GTCore/**/*.bundle'
+
+      # subspec.resource_bundles = 'GTModuleLibrary/GTModuleLibrary/GTBaseModule/GTCore/**/*.bundle'
+      
       # 配置系统Framework
       subspec.frameworks = 'UIKit', 'Foundation'
 
-      # 配置第三方库
+      # 依赖其他的pod库
       subspec.dependency 'SDWebImage'
       subspec.dependency 'YTKNetwork'
       subspec.dependency 'RealReachability'

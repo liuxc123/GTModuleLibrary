@@ -5,7 +5,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "YTKBatchRequest.h"
+#import <YTKNetwork/YTKNetwork.h>
 
 @interface YTKBatchRequest (AnimatingAccessory)
 

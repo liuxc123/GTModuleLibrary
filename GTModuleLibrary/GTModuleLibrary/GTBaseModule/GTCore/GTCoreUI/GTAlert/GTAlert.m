@@ -192,6 +192,13 @@ typedef NS_ENUM(NSInteger, GTBackgroundStyle) {
     
 }
 
+- (void)gt_Content:(NSString *)str {
+    self.gt_AddContent(^(UILabel *label) {
+        label.text = str;
+    });
+}
+
+
 - (GTConfigToView)gt_CustomView{
     
     __weak typeof(self) weakSelf = self;
@@ -208,6 +215,7 @@ typedef NS_ENUM(NSInteger, GTBackgroundStyle) {
     };
     
 }
+
 
 - (GTConfigToStringAndBlock)gt_Action{
     

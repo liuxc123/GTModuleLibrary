@@ -422,7 +422,7 @@
 
         [self.view addSubview:self.webView];
 
-        //        [self changeNavigatorUserAgent];
+        //        [weakSelf changeNavigatorUserAgent];
     }
     return _webView;
 }

@@ -28,9 +28,15 @@ class UserInfoApi: GTBaseRequest {
         } else {
             return TestModel()
         }
+        
     }
 
 
+    func testAlert() {
+        _ = GTAlert.alert().config.gt_Title("提示")?.gt_Content("内容")?.gt_Show()
+
+        GTAlert.alert().config
+    }
 
 
 

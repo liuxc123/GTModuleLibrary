@@ -22,8 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 #define GT_NET_ERROR_HTML_PATH_String       @"/GTWKWebView.bundle/html.bundle/neterror.html"
 #define GT_404_NOT_FOUND_HTML_PATH_String   @"/GTWKWebView.bundle/html.bundle/404.html"
-#define GT_NET_ERROR_HTML_PATH              [[NSBundle mainBundle] pathForResource:@"GTWKWebView.bundle/html.bundle/neterror" ofType:@"html"]
-#define GT_404_NOT_FOUND_HTML_PATH          [[NSBundle mainBundle] pathForResource:@"GTWKWebView.bundle/html.bundle/404" ofType:@"html"]
+#define GT_NET_ERROR_HTML_PATH              [[NSBundle mainBundle] pathForResource:@"html.bundle/neterror" ofType:@"html"]
+#define GT_404_NOT_FOUND_HTML_PATH          [[NSBundle mainBundle] pathForResource:@"html.bundle/404" ofType:@"html"]
 
 // 是否使用reload的方式处理内存占用过大造成的白屏问题
 // 当打开的时候如果某个页面出现频繁刷新的情况，建议优化网页

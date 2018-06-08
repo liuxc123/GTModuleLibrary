@@ -83,11 +83,14 @@
 /** 设置 标题 -> 格式: .gt_Title(@@"") */
 @property (nonatomic , copy , readonly ) GTConfigToString gt_Title;
 
+
 /** 设置 内容 -> 格式: .gt_Content(@@"") */
 @property (nonatomic , copy , readonly ) GTConfigToString gt_Content;
 
+
 /** 设置 自定义视图 -> 格式: .gt_CustomView(UIView) */
 @property (nonatomic , copy , readonly ) GTConfigToView gt_CustomView;
+
 
 /** 设置 动作 -> 格式: .gt_Action(@"name" , ^{ //code.. }) */
 @property (nonatomic , copy , readonly ) GTConfigToStringAndBlock gt_Action;
