@@ -812,7 +812,6 @@
 		04D8D43420C632C5007D07BF /* GTBaseModule */ = {
 			isa = PBXGroup;
 			children = (
-				04D8D43720C635CC007D07BF /* GTCategory */,
 				04D8D43620C635B5007D07BF /* GTCore */,
 			);
 			path = GTBaseModule;
@@ -821,6 +820,7 @@
 		04D8D43620C635B5007D07BF /* GTCore */ = {
 			isa = PBXGroup;
 			children = (
+				04D8D43720C635CC007D07BF /* GTCategory */,
 				04D8D44520C65677007D07BF /* GTBase */,
 				04D8D43B20C63B1E007D07BF /* GTRouter */,
 				04D8D43A20C63B0F007D07BF /* GTMacros */,
