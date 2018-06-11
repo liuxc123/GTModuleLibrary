@@ -11,7 +11,7 @@
 #import <JLRoutes/JLRRouteDefinition.h>
 #import <JLRoutes/JLRParsingUtilities.h>
 
-NSString *const JLRouterParameterCompletion = @"JLRouterParameterCallBack";
+NSString *const JLRouterParameterCallBack = @"JLRouterParameterCallBack";
 
 @interface JLRRouteDefinition (kExtension)
 

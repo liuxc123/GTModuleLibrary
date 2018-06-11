@@ -24,4 +24,7 @@
 #pragma mark 工具
 #import "GTCoreTool.h"
 
+#pragma mark 路由
+#import "GTRouter.h"
+
 #endif /* GTModuleCore_h */
