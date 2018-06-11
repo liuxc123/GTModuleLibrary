@@ -9,5 +9,8 @@
 #ifndef GTRouter_h
 #define GTRouter_h
 
+#import "RouterConstant.h"
+#import "JLRoutes+GenerateURL.h"
+#import "RouterCommon.h"
 
 #endif /* GTRouter_h */

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04586F2220CE148B00A9CB03 /* RouterConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 04586F2020CE148B00A9CB03 /* RouterConstant.m */; };
+		04586F2520CE151900A9CB03 /* JLRoutes+GenerateURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 04586F2420CE151900A9CB03 /* JLRoutes+GenerateURL.m */; };
+		04586F3020CE166400A9CB03 /* GTBaseModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 04586F2F20CE166400A9CB03 /* GTBaseModule.m */; };
+		04586F3320CE16D400A9CB03 /* GTPageParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 04586F3220CE16D400A9CB03 /* GTPageParam.m */; };
+		04586F3920CE1C0500A9CB03 /* RouterCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 04586F3820CE1C0500A9CB03 /* RouterCommon.m */; };
 		04606EC820C8C71000C3407F /* YTKNetworkAgent+gt_Agent.m in Sources */ = {isa = PBXBuildFile; fileRef = 04606EC720C8C71000C3407F /* YTKNetworkAgent+gt_Agent.m */; };
 		04606ECE20C90F9400C3407F /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04606ECD20C90F9400C3407F /* TestModel.swift */; };
 		04B5406320C631290001BBE6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B5406220C631290001BBE6 /* AppDelegate.m */; };
@@ -198,6 +203,17 @@
 
 /* Begin PBXFileReference section */
 		04182D1B20CA65FD00A7176B /* html.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = html.bundle; sourceTree = "<group>"; };
+		04586F2020CE148B00A9CB03 /* RouterConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouterConstant.m; sourceTree = "<group>"; };
+		04586F2120CE148B00A9CB03 /* RouterConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouterConstant.h; sourceTree = "<group>"; };
+		04586F2320CE151900A9CB03 /* JLRoutes+GenerateURL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JLRoutes+GenerateURL.h"; sourceTree = "<group>"; };
+		04586F2420CE151900A9CB03 /* JLRoutes+GenerateURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JLRoutes+GenerateURL.m"; sourceTree = "<group>"; };
+		04586F2D20CE161F00A9CB03 /* GTBaseControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTBaseControllerProtocol.h; sourceTree = "<group>"; };
+		04586F2E20CE166400A9CB03 /* GTBaseModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTBaseModule.h; sourceTree = "<group>"; };
+		04586F2F20CE166400A9CB03 /* GTBaseModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTBaseModule.m; sourceTree = "<group>"; };
+		04586F3120CE16D400A9CB03 /* GTPageParam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTPageParam.h; sourceTree = "<group>"; };
+		04586F3220CE16D400A9CB03 /* GTPageParam.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTPageParam.m; sourceTree = "<group>"; };
+		04586F3720CE1C0500A9CB03 /* RouterCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RouterCommon.h; sourceTree = "<group>"; };
+		04586F3820CE1C0500A9CB03 /* RouterCommon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RouterCommon.m; sourceTree = "<group>"; };
 		04606EC720C8C71000C3407F /* YTKNetworkAgent+gt_Agent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "YTKNetworkAgent+gt_Agent.m"; sourceTree = "<group>"; };
 		04606ECD20C90F9400C3407F /* TestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
 		04B5405E20C631290001BBE6 /* GTModuleLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GTModuleLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -591,6 +607,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04586F2B20CE15D800A9CB03 /* GTBaseBeeHive */ = {
+			isa = PBXGroup;
+			children = (
+				04586F2D20CE161F00A9CB03 /* GTBaseControllerProtocol.h */,
+				04586F2E20CE166400A9CB03 /* GTBaseModule.h */,
+				04586F2F20CE166400A9CB03 /* GTBaseModule.m */,
+				04586F3120CE16D400A9CB03 /* GTPageParam.h */,
+				04586F3220CE16D400A9CB03 /* GTPageParam.m */,
+			);
+			path = GTBaseBeeHive;
+			sourceTree = "<group>";
+		};
 		04B5405520C631290001BBE6 = {
 			isa = PBXGroup;
 			children = (
@@ -705,6 +733,12 @@
 		04D8D43B20C63B1E007D07BF /* GTRouter */ = {
 			isa = PBXGroup;
 			children = (
+				04586F2120CE148B00A9CB03 /* RouterConstant.h */,
+				04586F2020CE148B00A9CB03 /* RouterConstant.m */,
+				04586F2320CE151900A9CB03 /* JLRoutes+GenerateURL.h */,
+				04586F2420CE151900A9CB03 /* JLRoutes+GenerateURL.m */,
+				04586F3720CE1C0500A9CB03 /* RouterCommon.h */,
+				04586F3820CE1C0500A9CB03 /* RouterCommon.m */,
 				04D8D67D20C686C6007D07BF /* GTRouter.h */,
 			);
 			path = GTRouter;
@@ -730,6 +764,7 @@
 		04D8D44520C65677007D07BF /* GTBase */ = {
 			isa = PBXGroup;
 			children = (
+				04586F2B20CE15D800A9CB03 /* GTBaseBeeHive */,
 				04D8D65520C68406007D07BF /* GTBaseFormController */,
 				04D8D44620C6577F007D07BF /* GTBaseViewController */,
 				04D8D45A20C65780007D07BF /* GTNavigationCoontroller */,
@@ -1491,7 +1526,6 @@
 		04D8D68220C7790F007D07BF /* Accessory */ = {
 			isa = PBXGroup;
 			children = (
-				04606EC720C8C71000C3407F /* YTKNetworkAgent+gt_Agent.m */,
 				04D8D68320C7790F007D07BF /* YTKAnimatingRequestAccessory.h */,
 				04D8D68720C7790F007D07BF /* YTKAnimatingRequestAccessory.m */,
 				04D8D68620C7790F007D07BF /* YTKBaseRequest+AnimatingAccessory.h */,
@@ -1500,6 +1534,7 @@
 				04D8D68820C7790F007D07BF /* YTKBatchRequest+AnimatingAccessory.m */,
 				04D8D68520C7790F007D07BF /* YTKChainRequest+AnimatingAccessory.h */,
 				04D8D68920C7790F007D07BF /* YTKChainRequest+AnimatingAccessory.m */,
+				04606EC720C8C71000C3407F /* YTKNetworkAgent+gt_Agent.m */,
 			);
 			path = Accessory;
 			sourceTree = "<group>";
@@ -1674,6 +1709,7 @@
 				04D8D49C20C65F6C007D07BF /* MKMapView+MoveLogo.m in Sources */,
 				04D8D63E20C6697E007D07BF /* NSNumber+GTKit.m in Sources */,
 				04D8D5F720C66941007D07BF /* UIControl+GTSound.m in Sources */,
+				04586F2520CE151900A9CB03 /* JLRoutes+GenerateURL.m in Sources */,
 				04D8D5E620C66941007D07BF /* UIView+GTConstraints.m in Sources */,
 				04D8D52420C6675D007D07BF /* GTFormInlineSelectorCell.m in Sources */,
 				04D8D64920C6697E007D07BF /* NSTimer+GTKit.m in Sources */,
@@ -1698,6 +1734,7 @@
 				04D8D53120C6675D007D07BF /* NSString+GTFormAdditions.m in Sources */,
 				04D8D60B20C66941007D07BF /* UIGestureRecognizer+GTKit.m in Sources */,
 				04D8D60020C66941007D07BF /* UITableView+GTKit.m in Sources */,
+				04586F2220CE148B00A9CB03 /* RouterConstant.m in Sources */,
 				04D8D60F20C66941007D07BF /* UIScreen+GTKit.m in Sources */,
 				04D8D54520C668B4007D07BF /* CABasicAnimation+GTKit.m in Sources */,
 				04D8D5F420C66941007D07BF /* UIBarButtonItem+GTBadge.m in Sources */,
@@ -1774,6 +1811,7 @@
 				04D8D65020C6697E007D07BF /* NSSet+GTKit.m in Sources */,
 				04D8D52C20C6675D007D07BF /* GTFormOptionsViewController.m in Sources */,
 				04D8D5F020C66941007D07BF /* UIBezierPath+GTKit.m in Sources */,
+				04586F3020CE166400A9CB03 /* GTBaseModule.m in Sources */,
 				04D8D53720C6675D007D07BF /* UIView+GTFormAdditions.m in Sources */,
 				04D8D60620C66941007D07BF /* UITableView+GTKeyedHeightCache.m in Sources */,
 				04D8D5F220C66941007D07BF /* UICollectionViewCell+GTTemplateLayoutCell.m in Sources */,
@@ -1810,11 +1848,13 @@
 				04D8D64D20C6697E007D07BF /* NSDate+GTInternetDateTime.m in Sources */,
 				04D8D4B120C6667B007D07BF /* GTCGCommon.m in Sources */,
 				04D8D63D20C6697E007D07BF /* NSData+GTKit.m in Sources */,
+				04586F3920CE1C0500A9CB03 /* RouterCommon.m in Sources */,
 				04D8D52220C6675D007D07BF /* GTFormDatePickerCell.m in Sources */,
 				04B5406320C631290001BBE6 /* AppDelegate.m in Sources */,
 				04D8D5DB20C66941007D07BF /* UIViewController+GTKit.m in Sources */,
 				04D8D61020C66941007D07BF /* UIScrollView+APParallaxHeader.m in Sources */,
 				04D8D60220C66941007D07BF /* UITableViewCell+GTKit.m in Sources */,
+				04586F3320CE16D400A9CB03 /* GTPageParam.m in Sources */,
 				04D8D46F20C65780007D07BF /* GTWebViewProgressView.m in Sources */,
 				04D8D60520C66941007D07BF /* UITableView+GTTemplateLayoutCellDebug.m in Sources */,
 				04D8D53420C6675D007D07BF /* NSExpression+GTFormAdditions.m in Sources */,

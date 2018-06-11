@@ -11,9 +11,10 @@
 #import "UIViewController+GTNavigationBar.h"
 #import "UIView+GTTransition.h"
 #import "GTProgressHUD.h"
+#import "GTBaseControllerProtocol.h"
 //#import "GTLoadingView.h"
 
-@interface GTBaseViewController : UIViewController
+@interface GTBaseViewController : UIViewController<GTBaseControllerProtocol>
 
 #pragma mark - 属性
 

@@ -32,12 +32,6 @@ class UserInfoApi: GTBaseRequest {
     }
 
 
-    func testAlert() {
-        _ = GTAlert.alert().config.gt_Title("提示")?.gt_Content("内容")?.gt_Show()
-
-        GTAlert.alert().config
-    }
-
 
 
 }
