@@ -30,9 +30,13 @@ target 'GTModuleLibrary' do
   #JSON解析工具
   pod 'ObjectMapper'
 
-
   #下拉加载工具
   pod 'MJRefresh'
+
+  #高德地图工具
+  pod 'AMapSearch'
+  pod 'AMapNavi'
+  pod 'AMapLocation'
 
 
 end

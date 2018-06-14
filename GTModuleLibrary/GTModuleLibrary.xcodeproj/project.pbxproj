@@ -308,6 +308,7 @@
 		04B8CBBD20D0E08D00FB3A82 /* GTLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLoadingView.h; sourceTree = "<group>"; };
 		04B8CBBF20D0E08D00FB3A82 /* GTProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTProgressView.h; sourceTree = "<group>"; };
 		04B8CBC020D0E08D00FB3A82 /* GTProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTProgressView.m; sourceTree = "<group>"; };
+		04B8CBE020D1FE9100FB3A82 /* MAMapCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAMapCore.h; sourceTree = "<group>"; };
 		04D8D43520C632F2007D07BF /* GTCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTCore.h; sourceTree = "<group>"; };
 		04D8D43C20C63B3B007D07BF /* GTCoreUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTCoreUI.h; sourceTree = "<group>"; };
 		04D8D43D20C63B4D007D07BF /* GTMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTMacros.h; sourceTree = "<group>"; };
@@ -834,9 +835,18 @@
 			path = LoadingProgressView;
 			sourceTree = "<group>";
 		};
+		04B8CBDF20D1FE6D00FB3A82 /* MAMapCore */ = {
+			isa = PBXGroup;
+			children = (
+				04B8CBE020D1FE9100FB3A82 /* MAMapCore.h */,
+			);
+			path = MAMapCore;
+			sourceTree = "<group>";
+		};
 		04D8D43420C632C5007D07BF /* GTBaseModule */ = {
 			isa = PBXGroup;
 			children = (
+				04B8CBDF20D1FE6D00FB3A82 /* MAMapCore */,
 				04D8D43620C635B5007D07BF /* GTCore */,
 			);
 			path = GTBaseModule;
@@ -1745,6 +1755,7 @@
 				04B5405B20C631290001BBE6 /* Frameworks */,
 				04B5405C20C631290001BBE6 /* Resources */,
 				A800EB4C965405315609DE4A /* [CP] Embed Pods Frameworks */,
+				1C57178E104B37F010C58E69 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1840,6 +1851,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1C57178E104B37F010C58E69 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GTModuleLibrary/Pods-GTModuleLibrary-resources.sh",
+				"${PODS_ROOT}/AMap3DMap/MAMapKit.framework/AMap.bundle",
+				"${PODS_ROOT}/AMapNavi/AMapNaviKit.framework/AMapNavi.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMap.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMapNavi.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GTModuleLibrary/Pods-GTModuleLibrary-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		46797721384D43019A0D8BDE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
