@@ -9,7 +9,11 @@
 #import "ViewController.h"
 #import "GTFunctionCommon.h"
 #import "GTModuleLibrary-Swift.h"
+
+#import "GTLoadingView.h"
 @interface ViewController ()
+
+@property (nonatomic, strong) GTLoadingView *loadingView;
 
 @end
 
@@ -17,41 +21,51 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        GTWebViewController *vc = [[GTWebViewController alloc] init];
-        [vc gt_web_loadURLString:@"http://www.baidu.com"];
-        [self.navigationController pushViewController:vc animated:YES];
-    });
+    [self.view addSubview:self.loadingView];
 
 
-    [GTAlert alert].config.gt_Title(@"提示").gt_Content(@"内容").gt_Action(@"确定", ^{
-    }).gt_CancelAction(@"取消", nil).gt_Show();
+//    [self.loadingView showLoadingText:@"加载中"];
+
+    [self.loadingView showLoadingProgressWithText:@"加载中"];
+
+//    [self.loadingView showLoadingText:@"加载中"];
+
+//    [self.loadingView showLoadingPromptBarWithText:@"测试" AutoHideTime:0.3];
+
 
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    UserInfoApi *api = [[UserInfoApi alloc] init];
+//    UserInfoApi *api = [[UserInfoApi alloc] init];
+//
+//    api.animatingText = @"加载中";
+//    api.animatingView = self.view;
+//
+//    [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+//        NSLog(@"jsonDic = %@", [api parsmDataValue]);
+//        NSLog(@"jsonString = %@", [api parsmDataValueWithJsonString]);
+//    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+//        NSLog(@"failed");
+//    }];
 
-    api.animatingText = @"加载中";
-    api.animatingView = self.view;
 
-    [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
-        NSLog(@"jsonDic = %@", [api parsmDataValue]);
-        NSLog(@"jsonString = %@", [api parsmDataValueWithJsonString]);
-    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
-        NSLog(@"failed");
-    }];
 
 
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+static GTLoadingView * extracted() {
+    return [[GTLoadingView alloc] initWithFrame:[UIScreen mainScreen].bounds LoadingViewStyle:LoadingViewStyleCircle];
 }
+
+- (GTLoadingView *)loadingView {
+    if (!_loadingView) {
+        _loadingView = extracted();
+    }
+    return _loadingView;
+}
+
 
 
 @end

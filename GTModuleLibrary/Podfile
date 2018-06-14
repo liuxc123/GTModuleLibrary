@@ -31,4 +31,8 @@ target 'GTModuleLibrary' do
   pod 'ObjectMapper'
 
 
+  #下拉加载工具
+  pod 'MJRefresh'
+
+
 end

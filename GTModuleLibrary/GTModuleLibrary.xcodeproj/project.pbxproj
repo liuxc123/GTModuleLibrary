@@ -12,6 +12,7 @@
 		04586F3020CE166400A9CB03 /* GTBaseModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 04586F2F20CE166400A9CB03 /* GTBaseModule.m */; };
 		04586F3320CE16D400A9CB03 /* GTPageParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 04586F3220CE16D400A9CB03 /* GTPageParam.m */; };
 		04586F3920CE1C0500A9CB03 /* RouterCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 04586F3820CE1C0500A9CB03 /* RouterCommon.m */; };
+		04586F3D20CE3BBC00A9CB03 /* GTPageStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04586F3C20CE3BBC00A9CB03 /* GTPageStateManager.m */; };
 		04606EC820C8C71000C3407F /* YTKNetworkAgent+gt_Agent.m in Sources */ = {isa = PBXBuildFile; fileRef = 04606EC720C8C71000C3407F /* YTKNetworkAgent+gt_Agent.m */; };
 		04606ECE20C90F9400C3407F /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04606ECD20C90F9400C3407F /* TestModel.swift */; };
 		04B5406320C631290001BBE6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B5406220C631290001BBE6 /* AppDelegate.m */; };
@@ -20,6 +21,40 @@
 		04B5406B20C631290001BBE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B5406A20C631290001BBE6 /* Assets.xcassets */; };
 		04B5406E20C631290001BBE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B5406C20C631290001BBE6 /* LaunchScreen.storyboard */; };
 		04B5407120C631290001BBE6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B5407020C631290001BBE6 /* main.m */; };
+		04B8CB8E20D0DD8900FB3A82 /* UIScrollView+GTRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B8CB8B20D0DD8900FB3A82 /* UIScrollView+GTRefresh.m */; };
+		04B8CB8F20D0DD8900FB3A82 /* UniversalRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B8CB8C20D0DD8900FB3A82 /* UniversalRefresh.m */; };
+		04B8CB9220D0DD9C00FB3A82 /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B8CB9020D0DD9C00FB3A82 /* UIScrollView+EmptyDataSet.m */; };
+		04B8CB9720D0E04000FB3A82 /* UIScrollView+GTPageState.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B8CB9620D0E04000FB3A82 /* UIScrollView+GTPageState.m */; };
+		04B8CBC120D0E08D00FB3A82 /* no_network2.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B8CB9A20D0E08D00FB3A82 /* no_network2.png */; };
+		04B8CBC220D0E08D00FB3A82 /* no_network14.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B8CB9B20D0E08D00FB3A82 /* no_network14.png */; };
+		04B8CBC320D0E08D00FB3A82 /* loadingcircleimage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B8CB9C20D0E08D00FB3A82 /* loadingcircleimage@2x.png */; };
+		04B8CBC420D0E08D00FB3A82 /* no_network3.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B8CB9D20D0E08D00FB3A82 /* no_network3.png */; };
+		04B8CBC520D0E08D00FB3A82 /* no_network1.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B8CB9E20D0E08D00FB3A82 /* no_network1.png */; };
+		04B8CBC620D0E08D00FB3A82 /* detail_loading_night.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B8CB9F20D0E08D00FB3A82 /* detail_loading_night.png */; };
+		04B8CBC720D0E08D00FB3A82 /* no_network4.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B8CBA020D0E08D00FB3A82 /* no_network4.png */; };
+		04B8CBC820D0E08D00FB3A82 /* no_network12.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B8CBA120D0E08D00FB3A82 /* no_network12.png */; };
+		04B8CBC920D0E08D00FB3A82 /* loadingcircleimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B8CBA220D0E08D00FB3A82 /* loadingcircleimage.png */; };
+		04B8CBCA20D0E08D00FB3A82 /* no_network13.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B8CBA320D0E08D00FB3A82 /* no_network13.png */; };
+		04B8CBCB20D0E08D00FB3A82 /* no_network5.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B8CBA420D0E08D00FB3A82 /* no_network5.png */; };
+		04B8CBCC20D0E08D00FB3A82 /* no_network7.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B8CBA520D0E08D00FB3A82 /* no_network7.png */; };
+		04B8CBCD20D0E08D00FB3A82 /* no_network11.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B8CBA620D0E08D00FB3A82 /* no_network11.png */; };
+		04B8CBCE20D0E08D00FB3A82 /* loadingcircleimage@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B8CBA720D0E08D00FB3A82 /* loadingcircleimage@3x.png */; };
+		04B8CBCF20D0E08D00FB3A82 /* no_network10.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B8CBA820D0E08D00FB3A82 /* no_network10.png */; };
+		04B8CBD020D0E08D00FB3A82 /* no_network6.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B8CBA920D0E08D00FB3A82 /* no_network6.png */; };
+		04B8CBD120D0E08D00FB3A82 /* detail_loading_night@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B8CBAA20D0E08D00FB3A82 /* detail_loading_night@3x.png */; };
+		04B8CBD220D0E08D00FB3A82 /* no_network8.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B8CBAB20D0E08D00FB3A82 /* no_network8.png */; };
+		04B8CBD320D0E08D00FB3A82 /* no_network9.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B8CBAC20D0E08D00FB3A82 /* no_network9.png */; };
+		04B8CBD420D0E08D00FB3A82 /* detail_loading_night@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B8CBAD20D0E08D00FB3A82 /* detail_loading_night@2x.png */; };
+		04B8CBD520D0E08D00FB3A82 /* detail_loading@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B8CBAE20D0E08D00FB3A82 /* detail_loading@2x.png */; };
+		04B8CBD620D0E08D00FB3A82 /* detail_loading.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B8CBAF20D0E08D00FB3A82 /* detail_loading.png */; };
+		04B8CBD720D0E08D00FB3A82 /* detail_loading@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B8CBB020D0E08D00FB3A82 /* detail_loading@3x.png */; };
+		04B8CBD820D0E08D00FB3A82 /* GTLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B8CBB120D0E08D00FB3A82 /* GTLoadingView.m */; };
+		04B8CBD920D0E08D00FB3A82 /* LoadingStyleCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B8CBB520D0E08D00FB3A82 /* LoadingStyleCircleView.m */; };
+		04B8CBDA20D0E08D00FB3A82 /* LoadingStyleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B8CBB620D0E08D00FB3A82 /* LoadingStyleProgressView.m */; };
+		04B8CBDB20D0E08D00FB3A82 /* LoadingStyleTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B8CBB720D0E08D00FB3A82 /* LoadingStyleTitleView.m */; };
+		04B8CBDC20D0E08D00FB3A82 /* LoadingStylePromptBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B8CBB820D0E08D00FB3A82 /* LoadingStylePromptBarView.m */; };
+		04B8CBDD20D0E08D00FB3A82 /* LoadingStyleNoDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B8CBB920D0E08D00FB3A82 /* LoadingStyleNoDataView.m */; };
+		04B8CBDE20D0E08D00FB3A82 /* GTProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B8CBC020D0E08D00FB3A82 /* GTProgressView.m */; };
 		04D8D44420C63BEA007D07BF /* GTBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D8D44320C63BEA007D07BF /* GTBaseRequest.m */; };
 		04D8D46920C65780007D07BF /* GTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D8D44720C6577F007D07BF /* GTBaseViewController.m */; };
 		04D8D46A20C65780007D07BF /* WKWebView+GTKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D8D44E20C65780007D07BF /* WKWebView+GTKit.m */; };
@@ -214,6 +249,8 @@
 		04586F3220CE16D400A9CB03 /* GTPageParam.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTPageParam.m; sourceTree = "<group>"; };
 		04586F3720CE1C0500A9CB03 /* RouterCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RouterCommon.h; sourceTree = "<group>"; };
 		04586F3820CE1C0500A9CB03 /* RouterCommon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RouterCommon.m; sourceTree = "<group>"; };
+		04586F3B20CE3BBC00A9CB03 /* GTPageStateManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTPageStateManager.h; sourceTree = "<group>"; };
+		04586F3C20CE3BBC00A9CB03 /* GTPageStateManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTPageStateManager.m; sourceTree = "<group>"; };
 		04606EC720C8C71000C3407F /* YTKNetworkAgent+gt_Agent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "YTKNetworkAgent+gt_Agent.m"; sourceTree = "<group>"; };
 		04606ECD20C90F9400C3407F /* TestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
 		04B5405E20C631290001BBE6 /* GTModuleLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GTModuleLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -226,6 +263,51 @@
 		04B5406D20C631290001BBE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04B5406F20C631290001BBE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04B5407020C631290001BBE6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		04B8CB8A20D0DD8900FB3A82 /* UniversalRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniversalRefresh.h; sourceTree = "<group>"; };
+		04B8CB8B20D0DD8900FB3A82 /* UIScrollView+GTRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+GTRefresh.m"; sourceTree = "<group>"; };
+		04B8CB8C20D0DD8900FB3A82 /* UniversalRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniversalRefresh.m; sourceTree = "<group>"; };
+		04B8CB8D20D0DD8900FB3A82 /* UIScrollView+GTRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+GTRefresh.h"; sourceTree = "<group>"; };
+		04B8CB9020D0DD9C00FB3A82 /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
+		04B8CB9120D0DD9C00FB3A82 /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
+		04B8CB9520D0E04000FB3A82 /* UIScrollView+GTPageState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+GTPageState.h"; sourceTree = "<group>"; };
+		04B8CB9620D0E04000FB3A82 /* UIScrollView+GTPageState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+GTPageState.m"; sourceTree = "<group>"; };
+		04B8CB9A20D0E08D00FB3A82 /* no_network2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_network2.png; sourceTree = "<group>"; };
+		04B8CB9B20D0E08D00FB3A82 /* no_network14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_network14.png; sourceTree = "<group>"; };
+		04B8CB9C20D0E08D00FB3A82 /* loadingcircleimage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loadingcircleimage@2x.png"; sourceTree = "<group>"; };
+		04B8CB9D20D0E08D00FB3A82 /* no_network3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_network3.png; sourceTree = "<group>"; };
+		04B8CB9E20D0E08D00FB3A82 /* no_network1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_network1.png; sourceTree = "<group>"; };
+		04B8CB9F20D0E08D00FB3A82 /* detail_loading_night.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = detail_loading_night.png; sourceTree = "<group>"; };
+		04B8CBA020D0E08D00FB3A82 /* no_network4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_network4.png; sourceTree = "<group>"; };
+		04B8CBA120D0E08D00FB3A82 /* no_network12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_network12.png; sourceTree = "<group>"; };
+		04B8CBA220D0E08D00FB3A82 /* loadingcircleimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loadingcircleimage.png; sourceTree = "<group>"; };
+		04B8CBA320D0E08D00FB3A82 /* no_network13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_network13.png; sourceTree = "<group>"; };
+		04B8CBA420D0E08D00FB3A82 /* no_network5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_network5.png; sourceTree = "<group>"; };
+		04B8CBA520D0E08D00FB3A82 /* no_network7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_network7.png; sourceTree = "<group>"; };
+		04B8CBA620D0E08D00FB3A82 /* no_network11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_network11.png; sourceTree = "<group>"; };
+		04B8CBA720D0E08D00FB3A82 /* loadingcircleimage@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loadingcircleimage@3x.png"; sourceTree = "<group>"; };
+		04B8CBA820D0E08D00FB3A82 /* no_network10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_network10.png; sourceTree = "<group>"; };
+		04B8CBA920D0E08D00FB3A82 /* no_network6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_network6.png; sourceTree = "<group>"; };
+		04B8CBAA20D0E08D00FB3A82 /* detail_loading_night@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "detail_loading_night@3x.png"; sourceTree = "<group>"; };
+		04B8CBAB20D0E08D00FB3A82 /* no_network8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_network8.png; sourceTree = "<group>"; };
+		04B8CBAC20D0E08D00FB3A82 /* no_network9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_network9.png; sourceTree = "<group>"; };
+		04B8CBAD20D0E08D00FB3A82 /* detail_loading_night@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "detail_loading_night@2x.png"; sourceTree = "<group>"; };
+		04B8CBAE20D0E08D00FB3A82 /* detail_loading@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "detail_loading@2x.png"; sourceTree = "<group>"; };
+		04B8CBAF20D0E08D00FB3A82 /* detail_loading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = detail_loading.png; sourceTree = "<group>"; };
+		04B8CBB020D0E08D00FB3A82 /* detail_loading@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "detail_loading@3x.png"; sourceTree = "<group>"; };
+		04B8CBB120D0E08D00FB3A82 /* GTLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLoadingView.m; sourceTree = "<group>"; };
+		04B8CBB320D0E08D00FB3A82 /* LoadingStylePromptBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingStylePromptBarView.h; sourceTree = "<group>"; };
+		04B8CBB420D0E08D00FB3A82 /* LoadingStyleNoDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingStyleNoDataView.h; sourceTree = "<group>"; };
+		04B8CBB520D0E08D00FB3A82 /* LoadingStyleCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingStyleCircleView.m; sourceTree = "<group>"; };
+		04B8CBB620D0E08D00FB3A82 /* LoadingStyleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingStyleProgressView.m; sourceTree = "<group>"; };
+		04B8CBB720D0E08D00FB3A82 /* LoadingStyleTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingStyleTitleView.m; sourceTree = "<group>"; };
+		04B8CBB820D0E08D00FB3A82 /* LoadingStylePromptBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingStylePromptBarView.m; sourceTree = "<group>"; };
+		04B8CBB920D0E08D00FB3A82 /* LoadingStyleNoDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingStyleNoDataView.m; sourceTree = "<group>"; };
+		04B8CBBA20D0E08D00FB3A82 /* LoadingStyleTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingStyleTitleView.h; sourceTree = "<group>"; };
+		04B8CBBB20D0E08D00FB3A82 /* LoadingStyleProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingStyleProgressView.h; sourceTree = "<group>"; };
+		04B8CBBC20D0E08D00FB3A82 /* LoadingStyleCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingStyleCircleView.h; sourceTree = "<group>"; };
+		04B8CBBD20D0E08D00FB3A82 /* GTLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLoadingView.h; sourceTree = "<group>"; };
+		04B8CBBF20D0E08D00FB3A82 /* GTProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTProgressView.h; sourceTree = "<group>"; };
+		04B8CBC020D0E08D00FB3A82 /* GTProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTProgressView.m; sourceTree = "<group>"; };
 		04D8D43520C632F2007D07BF /* GTCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTCore.h; sourceTree = "<group>"; };
 		04D8D43C20C63B3B007D07BF /* GTCoreUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTCoreUI.h; sourceTree = "<group>"; };
 		04D8D43D20C63B4D007D07BF /* GTMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTMacros.h; sourceTree = "<group>"; };
@@ -619,6 +701,17 @@
 			path = GTBaseBeeHive;
 			sourceTree = "<group>";
 		};
+		04586F3A20CE3B7200A9CB03 /* GTPageStateManager */ = {
+			isa = PBXGroup;
+			children = (
+				04B8CB9820D0E08D00FB3A82 /* GTLoadingView */,
+				04B8CB9420D0E01C00FB3A82 /* UIScrollView */,
+				04586F3B20CE3BBC00A9CB03 /* GTPageStateManager.h */,
+				04586F3C20CE3BBC00A9CB03 /* GTPageStateManager.m */,
+			);
+			path = GTPageStateManager;
+			sourceTree = "<group>";
+		};
 		04B5405520C631290001BBE6 = {
 			isa = PBXGroup;
 			children = (
@@ -656,6 +749,89 @@
 				04D8D76F20C7D980007D07BF /* Test.swift */,
 			);
 			path = GTModuleLibrary;
+			sourceTree = "<group>";
+		};
+		04B8CB9420D0E01C00FB3A82 /* UIScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				04B8CB9120D0DD9C00FB3A82 /* UIScrollView+EmptyDataSet.h */,
+				04B8CB9020D0DD9C00FB3A82 /* UIScrollView+EmptyDataSet.m */,
+				04B8CB9520D0E04000FB3A82 /* UIScrollView+GTPageState.h */,
+				04B8CB9620D0E04000FB3A82 /* UIScrollView+GTPageState.m */,
+				04B8CB8D20D0DD8900FB3A82 /* UIScrollView+GTRefresh.h */,
+				04B8CB8B20D0DD8900FB3A82 /* UIScrollView+GTRefresh.m */,
+				04B8CB8A20D0DD8900FB3A82 /* UniversalRefresh.h */,
+				04B8CB8C20D0DD8900FB3A82 /* UniversalRefresh.m */,
+			);
+			path = UIScrollView;
+			sourceTree = "<group>";
+		};
+		04B8CB9820D0E08D00FB3A82 /* GTLoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				04B8CBB220D0E08D00FB3A82 /* AllStyleView */,
+				04B8CBBD20D0E08D00FB3A82 /* GTLoadingView.h */,
+				04B8CBB120D0E08D00FB3A82 /* GTLoadingView.m */,
+				04B8CBBE20D0E08D00FB3A82 /* LoadingProgressView */,
+				04B8CB9920D0E08D00FB3A82 /* LoadingResources */,
+			);
+			path = GTLoadingView;
+			sourceTree = "<group>";
+		};
+		04B8CB9920D0E08D00FB3A82 /* LoadingResources */ = {
+			isa = PBXGroup;
+			children = (
+				04B8CB9F20D0E08D00FB3A82 /* detail_loading_night.png */,
+				04B8CBAD20D0E08D00FB3A82 /* detail_loading_night@2x.png */,
+				04B8CBAA20D0E08D00FB3A82 /* detail_loading_night@3x.png */,
+				04B8CBAF20D0E08D00FB3A82 /* detail_loading.png */,
+				04B8CBAE20D0E08D00FB3A82 /* detail_loading@2x.png */,
+				04B8CBB020D0E08D00FB3A82 /* detail_loading@3x.png */,
+				04B8CBA220D0E08D00FB3A82 /* loadingcircleimage.png */,
+				04B8CB9C20D0E08D00FB3A82 /* loadingcircleimage@2x.png */,
+				04B8CBA720D0E08D00FB3A82 /* loadingcircleimage@3x.png */,
+				04B8CB9E20D0E08D00FB3A82 /* no_network1.png */,
+				04B8CB9A20D0E08D00FB3A82 /* no_network2.png */,
+				04B8CB9D20D0E08D00FB3A82 /* no_network3.png */,
+				04B8CBA020D0E08D00FB3A82 /* no_network4.png */,
+				04B8CBA420D0E08D00FB3A82 /* no_network5.png */,
+				04B8CBA920D0E08D00FB3A82 /* no_network6.png */,
+				04B8CBA520D0E08D00FB3A82 /* no_network7.png */,
+				04B8CBAB20D0E08D00FB3A82 /* no_network8.png */,
+				04B8CBAC20D0E08D00FB3A82 /* no_network9.png */,
+				04B8CBA820D0E08D00FB3A82 /* no_network10.png */,
+				04B8CBA620D0E08D00FB3A82 /* no_network11.png */,
+				04B8CBA120D0E08D00FB3A82 /* no_network12.png */,
+				04B8CBA320D0E08D00FB3A82 /* no_network13.png */,
+				04B8CB9B20D0E08D00FB3A82 /* no_network14.png */,
+			);
+			path = LoadingResources;
+			sourceTree = "<group>";
+		};
+		04B8CBB220D0E08D00FB3A82 /* AllStyleView */ = {
+			isa = PBXGroup;
+			children = (
+				04B8CBBC20D0E08D00FB3A82 /* LoadingStyleCircleView.h */,
+				04B8CBB520D0E08D00FB3A82 /* LoadingStyleCircleView.m */,
+				04B8CBB420D0E08D00FB3A82 /* LoadingStyleNoDataView.h */,
+				04B8CBB920D0E08D00FB3A82 /* LoadingStyleNoDataView.m */,
+				04B8CBBB20D0E08D00FB3A82 /* LoadingStyleProgressView.h */,
+				04B8CBB620D0E08D00FB3A82 /* LoadingStyleProgressView.m */,
+				04B8CBB320D0E08D00FB3A82 /* LoadingStylePromptBarView.h */,
+				04B8CBB820D0E08D00FB3A82 /* LoadingStylePromptBarView.m */,
+				04B8CBBA20D0E08D00FB3A82 /* LoadingStyleTitleView.h */,
+				04B8CBB720D0E08D00FB3A82 /* LoadingStyleTitleView.m */,
+			);
+			path = AllStyleView;
+			sourceTree = "<group>";
+		};
+		04B8CBBE20D0E08D00FB3A82 /* LoadingProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				04B8CBBF20D0E08D00FB3A82 /* GTProgressView.h */,
+				04B8CBC020D0E08D00FB3A82 /* GTProgressView.m */,
+			);
+			path = LoadingProgressView;
 			sourceTree = "<group>";
 		};
 		04D8D43420C632C5007D07BF /* GTBaseModule */ = {
@@ -706,6 +882,7 @@
 		04D8D43920C63B06007D07BF /* GTCoreUI */ = {
 			isa = PBXGroup;
 			children = (
+				04586F3A20CE3B7200A9CB03 /* GTPageStateManager */,
 				04D8D65920C68649007D07BF /* GTProgressHUD */,
 				04D8D4B620C6675C007D07BF /* GTForm */,
 				04D8D4B220C6671D007D07BF /* GTPopupController */,
@@ -1618,20 +1795,43 @@
 			buildActionMask = 2147483647;
 			files = (
 				04D8D67320C68649007D07BF /* angle-mask@2x.png in Resources */,
+				04B8CBC320D0E08D00FB3A82 /* loadingcircleimage@2x.png in Resources */,
 				04D8D67720C68649007D07BF /* success@3x.png in Resources */,
+				04B8CBC420D0E08D00FB3A82 /* no_network3.png in Resources */,
 				04D8D67020C68649007D07BF /* error@3x.png in Resources */,
 				04D8D47020C65780007D07BF /* GTWKWebView.bundle in Resources */,
 				04B5406E20C631290001BBE6 /* LaunchScreen.storyboard in Resources */,
+				04B8CBCD20D0E08D00FB3A82 /* no_network11.png in Resources */,
 				04D8D67A20C68649007D07BF /* info@2x.png in Resources */,
 				04D8D67920C68649007D07BF /* gt_hud_success@2x.png in Resources */,
+				04B8CBCF20D0E08D00FB3A82 /* no_network10.png in Resources */,
+				04B8CBC620D0E08D00FB3A82 /* detail_loading_night.png in Resources */,
+				04B8CBC220D0E08D00FB3A82 /* no_network14.png in Resources */,
+				04B8CBCE20D0E08D00FB3A82 /* loadingcircleimage@3x.png in Resources */,
+				04B8CBD620D0E08D00FB3A82 /* detail_loading.png in Resources */,
 				04D8D67620C68649007D07BF /* success@2x.png in Resources */,
+				04B8CBC920D0E08D00FB3A82 /* loadingcircleimage.png in Resources */,
+				04B8CBD420D0E08D00FB3A82 /* detail_loading_night@2x.png in Resources */,
+				04B8CBCA20D0E08D00FB3A82 /* no_network13.png in Resources */,
+				04B8CBC720D0E08D00FB3A82 /* no_network4.png in Resources */,
 				04D8D66F20C68649007D07BF /* gt_hud_error@2x.png in Resources */,
 				04B5406B20C631290001BBE6 /* Assets.xcassets in Resources */,
+				04B8CBC120D0E08D00FB3A82 /* no_network2.png in Resources */,
+				04B8CBD320D0E08D00FB3A82 /* no_network9.png in Resources */,
+				04B8CBD020D0E08D00FB3A82 /* no_network6.png in Resources */,
 				04D8D67120C68649007D07BF /* gt_hud_info@2x.png in Resources */,
+				04B8CBD220D0E08D00FB3A82 /* no_network8.png in Resources */,
+				04B8CBD720D0E08D00FB3A82 /* detail_loading@3x.png in Resources */,
+				04B8CBC820D0E08D00FB3A82 /* no_network12.png in Resources */,
+				04B8CBC520D0E08D00FB3A82 /* no_network1.png in Resources */,
 				04B5406920C631290001BBE6 /* Main.storyboard in Resources */,
 				04D8D51420C6675D007D07BF /* XLForm.bundle in Resources */,
+				04B8CBD520D0E08D00FB3A82 /* detail_loading@2x.png in Resources */,
+				04B8CBCC20D0E08D00FB3A82 /* no_network7.png in Resources */,
+				04B8CBD120D0E08D00FB3A82 /* detail_loading_night@3x.png in Resources */,
 				04D8D67520C68649007D07BF /* info@3x.png in Resources */,
 				04D8D67420C68649007D07BF /* error@2x.png in Resources */,
+				04B8CBCB20D0E08D00FB3A82 /* no_network5.png in Resources */,
 				04D8D67820C68649007D07BF /* gt_hud_warning@2x.png in Resources */,
 				04D8D67220C68649007D07BF /* angle-mask@3x.png in Resources */,
 			);
@@ -1670,6 +1870,7 @@
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/JLRoutes/JLRoutes.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/RealReachability/RealReachability.framework",
@@ -1683,6 +1884,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JLRoutes.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealReachability.framework",
@@ -1711,6 +1913,7 @@
 				04D8D5F720C66941007D07BF /* UIControl+GTSound.m in Sources */,
 				04586F2520CE151900A9CB03 /* JLRoutes+GenerateURL.m in Sources */,
 				04D8D5E620C66941007D07BF /* UIView+GTConstraints.m in Sources */,
+				04B8CB9720D0E04000FB3A82 /* UIScrollView+GTPageState.m in Sources */,
 				04D8D52420C6675D007D07BF /* GTFormInlineSelectorCell.m in Sources */,
 				04D8D64920C6697E007D07BF /* NSTimer+GTKit.m in Sources */,
 				04D8D5DA20C66941007D07BF /* UIViewController+TopBarMessage.m in Sources */,
@@ -1724,10 +1927,12 @@
 				04D8D51720C6675D007D07BF /* GTFormStaticCell.m in Sources */,
 				04D8D46A20C65780007D07BF /* WKWebView+GTKit.m in Sources */,
 				04D8D5E420C66941007D07BF /* UIView+GTAnimation.m in Sources */,
+				04B8CBDE20D0E08D00FB3A82 /* GTProgressView.m in Sources */,
 				04D8D5EC20C66941007D07BF /* UIView+GTGesture.m in Sources */,
 				04D8D64020C6697E007D07BF /* NSRunLoop+GTKit.m in Sources */,
 				04D8D51E20C6675D007D07BF /* GTFormBaseCell.m in Sources */,
 				04D8D51B20C6675D007D07BF /* GTFormImageCell.m in Sources */,
+				04B8CBDA20D0E08D00FB3A82 /* LoadingStyleProgressView.m in Sources */,
 				04D8D5DE20C66941007D07BF /* UIImage+GTGIF.m in Sources */,
 				04D8D52320C6675D007D07BF /* GTFormButtonCell.m in Sources */,
 				04D8D53920C6675D007D07BF /* GTFormValidationStatus.m in Sources */,
@@ -1736,6 +1941,7 @@
 				04D8D60020C66941007D07BF /* UITableView+GTKit.m in Sources */,
 				04586F2220CE148B00A9CB03 /* RouterConstant.m in Sources */,
 				04D8D60F20C66941007D07BF /* UIScreen+GTKit.m in Sources */,
+				04B8CBDD20D0E08D00FB3A82 /* LoadingStyleNoDataView.m in Sources */,
 				04D8D54520C668B4007D07BF /* CABasicAnimation+GTKit.m in Sources */,
 				04D8D5F420C66941007D07BF /* UIBarButtonItem+GTBadge.m in Sources */,
 				04D8D52F20C6675D007D07BF /* GTFormTextView.m in Sources */,
@@ -1743,6 +1949,7 @@
 				04D8D4AA20C66225007D07BF /* CALayer+GTKit.m in Sources */,
 				04D8D5F820C66941007D07BF /* UITextView+GTKit.m in Sources */,
 				04D8D52D20C6675D007D07BF /* GTFormRowNavigationAccessoryView.m in Sources */,
+				04586F3D20CE3BBC00A9CB03 /* GTPageStateManager.m in Sources */,
 				04D8D60720C66941007D07BF /* UIFont+GTKit.m in Sources */,
 				04D8D5E820C66941007D07BF /* UIView+GTGlowView.m in Sources */,
 				04D8D51320C6675D007D07BF /* GTForm.m in Sources */,
@@ -1756,6 +1963,8 @@
 				04D8D47320C65780007D07BF /* UIViewController+GTNavigationBar.m in Sources */,
 				04D8D67B20C68649007D07BF /* GTProgressHUD.m in Sources */,
 				04D8D53520C6675D007D07BF /* UIView+GTFrame.m in Sources */,
+				04B8CB8F20D0DD8900FB3A82 /* UniversalRefresh.m in Sources */,
+				04B8CBDB20D0E08D00FB3A82 /* LoadingStyleTitleView.m in Sources */,
 				04D8D60C20C66941007D07BF /* UITextField+GTHistory.m in Sources */,
 				04D8D47220C65780007D07BF /* GTNavigationController.m in Sources */,
 				04D8D64E20C6697E007D07BF /* NSObject+GTKVOBlock.m in Sources */,
@@ -1780,6 +1989,7 @@
 				04D8D5F620C66941007D07BF /* UIControl+GTBlock.m in Sources */,
 				04D8D5D720C66941007D07BF /* UITabBarItem+GTKit.m in Sources */,
 				04D8D68E20C7790F007D07BF /* YTKBaseRequest+AnimatingAccessory.m in Sources */,
+				04B8CBD820D0E08D00FB3A82 /* GTLoadingView.m in Sources */,
 				04D8D5D820C66941007D07BF /* UITabBarController+GTKit.m in Sources */,
 				04D8D5EB20C66941007D07BF /* UIView+GTKit.m in Sources */,
 				04D8D77020C7D980007D07BF /* Test.swift in Sources */,
@@ -1809,9 +2019,11 @@
 				04D8D64A20C6697E007D07BF /* NSString+GTEmoji.m in Sources */,
 				04D8D52920C6675D007D07BF /* GTFormStaticRowDescriptor.m in Sources */,
 				04D8D65020C6697E007D07BF /* NSSet+GTKit.m in Sources */,
+				04B8CBD920D0E08D00FB3A82 /* LoadingStyleCircleView.m in Sources */,
 				04D8D52C20C6675D007D07BF /* GTFormOptionsViewController.m in Sources */,
 				04D8D5F020C66941007D07BF /* UIBezierPath+GTKit.m in Sources */,
 				04586F3020CE166400A9CB03 /* GTBaseModule.m in Sources */,
+				04B8CB8E20D0DD8900FB3A82 /* UIScrollView+GTRefresh.m in Sources */,
 				04D8D53720C6675D007D07BF /* UIView+GTFormAdditions.m in Sources */,
 				04D8D60620C66941007D07BF /* UITableView+GTKeyedHeightCache.m in Sources */,
 				04D8D5F220C66941007D07BF /* UICollectionViewCell+GTTemplateLayoutCell.m in Sources */,
@@ -1836,8 +2048,10 @@
 				04D8D51F20C6675D007D07BF /* GTFormSliderCell.m in Sources */,
 				04D8D64820C6697E007D07BF /* NSKeyedUnarchiver+GTKit.m in Sources */,
 				04D8D77820C7E0E9007D07BF /* UserInfoApi.swift in Sources */,
+				04B8CBDC20D0E08D00FB3A82 /* LoadingStylePromptBarView.m in Sources */,
 				04D8D5E120C66941007D07BF /* UIImageView+GTKit.m in Sources */,
 				04D8D46D20C65780007D07BF /* WKWebView+Post.m in Sources */,
+				04B8CB9220D0DD9C00FB3A82 /* UIScrollView+EmptyDataSet.m in Sources */,
 				04D8D5EF20C66941007D07BF /* UIBezierPath+GTSVGString.m in Sources */,
 				04D8D76D20C7B35A007D07BF /* GTSystemCommon.m in Sources */,
 				04D8D4B520C6671D007D07BF /* GTPopupController.m in Sources */,
